@@ -15,3 +15,7 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// The way to add imgs and styles with React is a little bit tricky but
+// everything is explained on Scrimba or on the official documentation:
+// https://create-react-app.dev/docs/adding-images-fonts-and-files/
