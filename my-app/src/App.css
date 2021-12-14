@@ -4,7 +4,6 @@ body {
 
 .app-container {
   margin: 32px;
-  border: 1px solid red;
   height: 680px;
   width: 292.94px;
 }
@@ -30,7 +29,7 @@ body {
 .main-container > h1 {
     margin: 0;
     font-size: 25px;
-    margin: 8px 0px;
+    padding: 8px;
 }
 
 .main-container > h4 {
@@ -48,17 +47,19 @@ body {
 .second-main-container {
   background-color: #1A1B21;
   color: #FFFFFF;
-  padding: 0px 35px;
+  padding: 0px 25px;
 }
 
 .second-main-container > h2 {
   margin-top: 0;
   font-size: 16px;
+  padding-top: 6px;
 }
 
 .second-main-container > p {
   margin-bottom: 0px;
   font-size: 10px;
+  padding-bottom: 3px;
 }
 
 .footer-container {
@@ -67,12 +68,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0px;
+  padding: 10px 0px;
   font-size: 25px;
 }
 
 .footer-icon {
   padding: 0px 12px;
+  text-decoration: none;
+  color: #918E9B;
 }
 
 .email-container {
@@ -88,6 +91,11 @@ body {
 
 .email-container > a {
   margin: 0px;
+  text-decoration: none;
+  color: #161619;
+}
+
+.main-container > a {
   text-decoration: none;
 }
 

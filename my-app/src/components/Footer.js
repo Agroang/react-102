@@ -9,8 +9,12 @@ const linkedin = <FontAwesomeIcon icon={faLinkedin} />
 export default function Footer() {
   return (
     <div className="footer-container">
-      <div className="footer-icon">{github}</div>
-      <div className="footer-icon">{linkedin}</div>
+      <a href="https://github.com/Agroang">
+        <div className="footer-icon">{github}</div>
+      </a>
+      <a href="https://www.linkedin.com/in/agroang/">
+        <div className="footer-icon">{linkedin}</div>
+      </a>
     </div>
   )
 }
