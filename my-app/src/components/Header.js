@@ -1,7 +1,8 @@
 import React from "react"
+import avatar from "../images/avatar.jpg";
 
 export default function Header() {
   return (
-    <h3>Header here</h3>
+    <img src={avatar} className="avatar-img" alt="avatar" />
   )
 }

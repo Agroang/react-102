@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.app-container {
+  margin: 32px;
+  border: 1px solid red;
+  height: 680px;
+  width: 292.94px;
+}
+
+.avatar-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
