@@ -18,4 +18,57 @@ body {
 #root {
   display: flex;
   justify-content: center;
+  background-color: #23252C;
+}
+
+.main-container {
+  background-color: #1A1B21;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.main-container > h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.main-container > h4 {
+  font-size: 13px;
+  color: #F3BF99;
+  margin: 0px;
+}
+
+.main-container > h6 {
+  font-size: 10.5px;
+  color: #F5F5F5;
+  margin: 0px;
+}
+
+.second-main-container {
+  background-color: #1A1B21;
+  color: #FFFFFF;
+  padding: 0px 35px;
+}
+
+.second-main-container > h2 {
+  margin-top: 0;
+}
+
+.second-main-container > p {
+  margin-bottom: 0px;
+}
+
+.footer-container {
+  background-color: #161619;
+  color: #918E9B;
+}
+
+.email-container {
+  width: 247px;
+  height: 34px;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  color: #918E9B;
+  margin: auto;
 }
