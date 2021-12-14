@@ -30,6 +30,7 @@ body {
 .main-container > h1 {
     margin: 0;
     font-size: 25px;
+    margin: 8px 0px;
 }
 
 .main-container > h4 {
@@ -41,7 +42,7 @@ body {
 .main-container > h6 {
   font-size: 10.5px;
   color: #F5F5F5;
-  margin: 0px;
+  margin: 8px 0px;
 }
 
 .second-main-container {
@@ -52,15 +53,26 @@ body {
 
 .second-main-container > h2 {
   margin-top: 0;
+  font-size: 16px;
 }
 
 .second-main-container > p {
   margin-bottom: 0px;
+  font-size: 10px;
 }
 
 .footer-container {
   background-color: #161619;
   color: #918E9B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  font-size: 25px;
+}
+
+.footer-icon {
+  padding: 0px 12px;
 }
 
 .email-container {
