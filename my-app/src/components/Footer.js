@@ -2,6 +2,9 @@ import React from "react"
 
 export default function Footer() {
   return (
-    <h3>Footer here</h3>
+    <div className="footer-container">
+      <p>font-awesome icon github</p>
+      <p>font-awesome icon linkedin</p>
+    </div>
   )
 }
