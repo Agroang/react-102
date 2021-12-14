@@ -1,5 +1,12 @@
+/* general styling */
 body {
   margin: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: #23252C;
 }
 
 .app-container {
@@ -10,6 +17,7 @@ body {
   box-shadow: 0px 0px 15px 0px #bababa;
 }
 
+/* avatar styling */
 .avatar-img {
   max-width: 100%;
   max-height: 100%;
@@ -17,12 +25,7 @@ body {
   border-radius: 8px 8px 0px 0px;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
-  background-color: #23252C;
-}
-
+/* main content information styling */
 .main-container {
   background-color: #1A1B21;
   color: #FFFFFF;
@@ -66,23 +69,6 @@ body {
   padding-bottom: 3px;
 }
 
-.footer-container {
-  background-color: #161619;
-  color: #918E9B;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0px;
-  font-size: 25px;
-  border-radius: 0px 0px 8px 8px;
-}
-
-.footer-icon {
-  padding: 0px 12px;
-  text-decoration: none;
-  color: #918E9B;
-}
-
 .email-container {
   width: 247px;
   height: 34px;
@@ -108,4 +94,22 @@ body {
   font-size: 20px;
   margin: 0px;
   padding: 0px 5px;
+}
+
+/* footer styling */
+.footer-container {
+  background-color: #161619;
+  color: #918E9B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0px;
+  font-size: 25px;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.footer-icon {
+  padding: 0px 12px;
+  text-decoration: none;
+  color: #918E9B;
 }
