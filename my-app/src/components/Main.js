@@ -1,4 +1,8 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+const element = <FontAwesomeIcon icon={faEnvelope} />
 
 export default function Main () {
   return (
@@ -8,7 +12,7 @@ export default function Main () {
       <h4>Full-Stack Web Developer</h4>
       <h6>www.matiasau.me</h6>
       <div className="email-container">
-        <span>font-awesome icon mail</span>
+        <div className="font-awesome-icon-container">{element}</div>
         <a href="mailto:agroang@gmail.com">Email</a>
       </div>
     </div>

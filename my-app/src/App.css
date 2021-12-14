@@ -67,8 +67,20 @@ body {
   width: 247px;
   height: 34px;
   background-color: #e6e6e6;
-  display: flex;
-  align-items: center;
   color: #918E9B;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-container > a {
+  margin: 0px;
+  text-decoration: none;
+}
+
+.font-awesome-icon-container {
+  font-size: 20px;
+  margin: 0px;
+  padding: 0px 5px;
 }
