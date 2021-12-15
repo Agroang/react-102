@@ -6,6 +6,14 @@ body {
     margin: 0;
 }
 
+.gray {
+    color: #918E9B;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .navbar {
   height: 70px;
   width: 100%;
@@ -35,4 +43,23 @@ body {
 .hero-container > h1 {
   font-size: 36px;
   padding: 12px 0px;
+}
+
+.card-container {
+  width: 175px;
+  font-size: 12px;
+}
+
+.card-container > img {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.review-container {
+  display: flex;
+  align-items: center;
+}
+
+.review-container > img {
+  height: 14px;
 }
