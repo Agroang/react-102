@@ -43,3 +43,29 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// You can name the props (in the example above, those are the img, name, etc)
+// whatever you want.
+
+// Then, following the example above, the actual Contact.js component would
+// look something like this:
+
+// (you all the argument props but you can call it whatever you want and to
+// to check what you are getting you can use console.log(props)).
+
+// export default function Contact(props) {
+//   return (
+//     <div className="contact-card">
+//       <img src={props.img} />
+//       <h3>{props.name}</h3>
+//       <div className="info-group">
+//         <img src="./images/phone-icon.png" />
+//         <p>{props.phone}</p>
+//       </div>
+//       <div className="info-group">
+//         <img src="./images/mail-icon.png" />
+//         <p>{props.email}</p>
+//       </div>
+//     </div>
+//   )
+// }
