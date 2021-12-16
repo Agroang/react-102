@@ -103,3 +103,16 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// How to put some conditionals, in this case only to display if true(truthy,
+// meaning that exists, in this case if props.setup exists it will display
+// it inside that h3), otherwise it won't
+// export default function Joke(props) {
+//   return (
+//     <div>
+//       {props.setup && <h3>Setup: {props.setup}</h3>}
+//       <p>Punchline: {props.punchline}</p>
+//       <hr />
+//     </div>
+//   )
+// }
