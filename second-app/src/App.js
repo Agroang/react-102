@@ -140,3 +140,24 @@ export default function App() {
 //     <img src={srcImg} className="card--image" />
 // You can also do it directly into the src= BUT as
 // `` is JS, you would have to do it like: {`../images/${props.img}`}
+
+// React is quite intelligent and in a way it can map over an array if you pass
+// and array while rendering, of course we usually map ourselves over the data
+// but the idea could be like the following:
+
+// export default function App() {
+//   const colors = [
+//     <h3>Red</h3>,
+//     <h3>Orange</h3>,
+//     <h3>Yellow</h3>,
+//     <h3>Green</h3>,
+//     <h3>Blue</h3>,
+//     <h3>Indigo</h3>,
+//     <h3>Violet</h3>
+//   ]
+//   return (
+//     <div>
+//       {colors}
+//     </div>
+//   )
+// }
