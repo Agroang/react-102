@@ -116,3 +116,14 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// Of course you can also pass JS through the props, instead of just
+// string.
+
+/* <Joke
+  punchline="I got my daughter a fridge for her birthday."
+  upvotes={1}
+  downvotes={1}
+  comments={["great", "awful", "send help"]}
+  isPun={true}
+/> */
