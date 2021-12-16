@@ -80,3 +80,26 @@ export default function App() {
 
 // const {img, name} = person
 // console.log(name)
+
+// A full example of destructured props would be:
+// (important to remember, the arguments that we
+// are passing come from the rendering so it must the same
+// names (you can re declared using colons but we are not
+// there yet....))
+
+// export default function Contact({ img, name, phone, email }) {
+//   return (
+//     <div className="contact-card">
+//       <img src={img} />
+//       <h3>{name}</h3>
+//       <div className="info-group">
+//         <img src="./images/phone-icon.png" />
+//         <p>{phone}</p>
+//       </div>
+//       <div className="info-group">
+//         <img src="./images/mail-icon.png" />
+//         <p>{email}</p>
+//       </div>
+//     </div>
+//   )
+// }
