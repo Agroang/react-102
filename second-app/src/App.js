@@ -161,3 +161,22 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// Knowing this, the next is to have a js file with an array and export default
+// that array (just export default = []) and then in App import that array as:
+// import jokesData from "./jokesData"
+// With that we can do the following:
+
+// export default function App() {
+//   const jokeElements = jokesData.map(joke => {
+//     return <Joke
+//       setup={joke.setup}
+//       punchline={joke.punchline}
+//     />
+//   })
+//   return (
+//     <div>
+//       {jokeElements}
+//     </div>
+//   )
+// }
