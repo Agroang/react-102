@@ -127,3 +127,15 @@ export default function App() {
   comments={["great", "awful", "send help"]}
   isPun={true}
 /> */
+
+// It's a little bit more tricky to try to pass JS inside a string,
+// so remember to use template literals (interpolation)
+
+// const image = props.img
+// console.log(image)
+// const srcImg = `../images/${image}`
+// console.log(srcImg)
+// return (
+//   <div className="card">
+//     <img src={srcImg} className="card--image" />
+// You can also do it directly into the src=``
