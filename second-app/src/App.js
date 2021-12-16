@@ -138,4 +138,5 @@ export default function App() {
 // return (
 //   <div className="card">
 //     <img src={srcImg} className="card--image" />
-// You can also do it directly into the src=``
+// You can also do it directly into the src= BUT as
+// `` is JS, you would have to do it like: {`../images/${props.img}`}
