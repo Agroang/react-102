@@ -69,3 +69,14 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// JS Object destructuring: (very common to do when using React)
+// const person = {
+//     img: "./images/mr-whiskerson.png",
+//     name: "Mr. Whiskerson",
+//     phone: "(800) 555-1234",
+//     email: "mr.whiskaz@catnap.meow"
+// }
+
+// const {img, name} = person
+// console.log(name)
