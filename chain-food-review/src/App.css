@@ -18,3 +18,18 @@
 .navbar > span {
   font-size: 32px;
 }
+
+/* card styling */
+
+.card-container {
+  border: 1px solid red;
+}
+
+.location-container {
+  display: flex;
+  align-items: center;
+}
+
+.location-container > span {
+  padding: 8px;
+}
