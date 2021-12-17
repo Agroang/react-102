@@ -205,3 +205,10 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// When using .map on data we usually get a React error that says
+// that we should have a unique key, a normal way to fix this
+// is by passing a unique value (unique to that item) and give
+// it a name of key, usually what it is passed is the id.
+// <Card
+//    key = { item.id } (this is inside the component) ...
