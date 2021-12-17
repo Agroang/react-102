@@ -2,6 +2,8 @@ import React from "react"
 
 export default function Navbar() {
   return(
-    <h2>hello from the navbar</h2>
+    <nav className="navbar">
+      <h1>Matias's Gyudon Restaurants Reviews!</h1>
+    </nav>
   )
 }

@@ -1,9 +1,15 @@
 import React from "react"
 
-export default function Card() {
+export default function Card(props) {
   return(
-    <h2>hello from the card</h2>
+    <div className="card-container">
+
+      {/* // awesomefont the location  */}
+      <h3>{props.location}</h3>
+      <h1>{props.title}</h1>
+      <p>{props.reviewDate}</p>
+      <p>{props.review}</p>
+      <hr />
+    </div>
   )
 }
-
-// add the props as argument
