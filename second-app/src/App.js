@@ -180,3 +180,28 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// Kind of finishing what we have been doing, if we have the data in a js file:
+// import dataArray from "./data"
+// export default function App() {
+//   // <Hero />
+//   const cardElements = dataArray.map(card => {
+//     console.log(card.coverImg)
+//     return (
+//       <Card
+//         img={card.coverImg}
+//         rating={card.stats.rating}
+//         reviewCount={card.stats.reviewCount}
+//         location={card.location}
+//         title={card.title}
+//         price={card.price}
+//       />
+//     )
+//   })
+//   return (
+//     <div>
+//       <Navbar />
+//       {cardElements}
+//     </div>
+//   )
+// }
