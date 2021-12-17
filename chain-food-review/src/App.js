@@ -4,6 +4,8 @@ import Navbar from './components/Navbar'
 import Card from './components/Card'
 import data from './data'
 
+console.log(data);
+
 export default function App() {
   let cards = data.map(item => {
   return (

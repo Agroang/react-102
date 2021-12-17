@@ -1,5 +1,6 @@
 const dataArray = [
   {
+    id: 1,
     title: "Sukiya",
     location: "Yanokuchi, Inagi",
     googleMapsUrl: "https://goo.gl/maps/ApEuYSEozNvw23cx6",
@@ -8,6 +9,7 @@ const dataArray = [
     imageUrl: "https://japanrestaurant.net/wp/wp-content/uploads/2018/05/imgCPkAnK-787x552.jpg"
   },
   {
+    id: 2,
     title: "Matsuya",
     location: "Yanokuchi, Inagi",
     googleMapsUrl: "https://goo.gl/maps/yQv5UyhS32t4kJrf7",
@@ -16,6 +18,7 @@ const dataArray = [
     imageUrl: "https://japanjourneys.jp/wp-content/uploads/2019/12/matsuya-japanese-restaurant-tokyo-matsuya.jpg"
   },
   {
+    id: 3,
     title: "Yoshinoya",
     location: "Yanokuchi, Inagi",
     googleMapsUrl: "https://goo.gl/maps/JUN58WznvdgHM2Sk6",
