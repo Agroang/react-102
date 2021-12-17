@@ -12,6 +12,7 @@ export default function Card(props) {
         <div className="location-container">
         <span>{element}</span>
         <h3>{props.location}</h3>
+          <a href={props.googleMapsUrl}>View on Google Maps</a>
         </div>
         <h1>{props.title}</h1>
         <p>{props.reviewDate}</p>

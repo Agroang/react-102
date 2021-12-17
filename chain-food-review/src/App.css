@@ -29,6 +29,10 @@
   overflow:hidden;
 }
 
+.stats-container > * {
+  margin: 0;
+}
+
 .card-container > img {
   width: 45%;
   /* height: fit-content; */
