@@ -212,3 +212,8 @@ export default function App() {
 // it a name of key, usually what it is passed is the id.
 // <Card
 //    key = { item.id } (this is inside the component) ...
+
+// Another example on how to have display logic (display only under certain
+// conditions)
+// { props.openSpots === 0 && <div className="card--badge">SOLD OUT</div> }
+// The above will only be displayed if props.openSpots === 0
