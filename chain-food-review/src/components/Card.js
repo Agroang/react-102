@@ -15,7 +15,7 @@ export default function Card(props) {
           <a href={props.googleMapsUrl}>View on Google Maps</a>
         </div>
         <h1>{props.title}</h1>
-        <p>{props.reviewDate}</p>
+        <p className="review-date">{props.reviewDate}</p>
         <p>{props.review}</p>
       </div>
     </div>

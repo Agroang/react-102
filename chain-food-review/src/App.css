@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(253, 253, 171);
+  background-color: rgb(217 244 231);
   box-shadow: 0px 0px 10px 0px #bababa;
 }
 
@@ -17,21 +17,43 @@
 
 .navbar > span {
   font-size: 32px;
+  color: #ff6a00;
 }
 
 /* card styling */
 
 .card-container {
-  border: 1px solid red;
-  margin: 20px 70px;
+  margin: 40px 70px;
   display: flex;
   height:250px;
   overflow:hidden;
+  box-shadow: 4px 4px 4px 3px #c3c3c3;
+}
+
+.card-container > img {
+  border-radius: 10px;
 }
 
 .stats-container > * {
   margin: 0;
 }
+
+.stats-container {
+  padding: 0px 24px;
+}
+
+.stats-container > h1 {
+  padding-bottom: 8px;
+}
+
+.stats-container > .review-date {
+  font-weight: bold;
+}
+
+.stats-container > p {
+  padding-top: 12px;
+}
+
 
 .card-container > img {
   width: 45%;
@@ -43,6 +65,15 @@
   align-items: center;
 }
 
-/* .location-container > span {
-  padding: 8px; will do later after general styling
-} */
+.location-container > h3 {
+  letter-spacing: 0.13em;
+  padding: 0px 8px;
+}
+
+.location-container > span {
+  color: red;
+}
+
+.location-container > a {
+  color: rgb(170, 170, 170);
+}
