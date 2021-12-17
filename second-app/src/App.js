@@ -253,3 +253,18 @@ export default function App() {
 //     </div>
 //   )
 // }
+
+// There is also another way that instead of passing the item as an object, you can use the spread operator
+// and it will be just like before (passing each property individually)
+// The syntax would be as follows:
+// export default function App() {
+//   const cards = data.map(item => {
+//     return (
+//       <Card
+//         key={item.id}
+//         {...item} (this is the spread operator, the other way is as item={item}, but this one
+// will need more read on the card component side, console.log to check what you are getting,
+// it seems that there is no right or wrong, but it's prefference and you might find it
+// will working on react)
+// More info in the following link (about object spread)
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals
