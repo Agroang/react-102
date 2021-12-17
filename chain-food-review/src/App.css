@@ -23,6 +23,15 @@
 
 .card-container {
   border: 1px solid red;
+  margin: 20px 70px;
+  display: flex;
+  height:250px;
+  overflow:hidden;
+}
+
+.card-container > img {
+  width: 45%;
+  /* height: fit-content; */
 }
 
 .location-container {
@@ -30,6 +39,6 @@
   align-items: center;
 }
 
-.location-container > span {
-  padding: 8px;
-}
+/* .location-container > span {
+  padding: 8px; will do later after general styling
+} */
