@@ -9,6 +9,7 @@ export default function Card(props) {
       <h1>{props.title}</h1>
       <p>{props.reviewDate}</p>
       <p>{props.review}</p>
+      <img src={props.imageUrl} alt="restaurant"/>
       <hr />
     </div>
   )
