@@ -1,0 +1,20 @@
+
+/* navbar styling */
+
+.navbar {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(253, 253, 171);
+  box-shadow: 0px 0px 10px 0px #bababa;
+}
+
+.navbar > h1 {
+  font-size: 32px;
+  padding: 8px;
+}
+
+.navbar > span {
+  font-size: 32px;
+}
