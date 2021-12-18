@@ -5,8 +5,13 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 const element = <FontAwesomeIcon icon={faMapMarkerAlt} />
 
 export default function Card(props) {
+  let badgeText
+  if (props.rating >= 3) {
+    badgeText = "Recommended"
+  }
   return(
     <div className="card-container">
+      {badgeText && <div className="badge-container">{badgeText}</div>}
       <img src={props.imageUrl} alt="restaurant"/>
       <div className="stats-container">
         <div className="location-container">
