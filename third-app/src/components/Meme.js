@@ -95,3 +95,6 @@ export default function Meme() {
 //     </div>
 //   )
 // }
+
+// a shorter way for the above example would be to call directly onClick the
+// add or substract functions and the result should be the same
