@@ -28,3 +28,8 @@ export default function Meme() {
 // usually handled with "state". A "state" is a way for React to remember saved
 // values from within a component. This is similar to declaring variables from
 // within a component.
+
+// Within the React library you have a hook called useState(), you can use as
+// React.useState() but is often deconstructed when you import as the following:
+// import React, {useState} from "react"
+// and then used just as .useState()
