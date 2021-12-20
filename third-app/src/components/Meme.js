@@ -23,3 +23,6 @@ export default function Meme() {
 
 // Even if we update a variable to change, once it has been rendered on React
 // the value won't change, for it to change we need React "states".
+
+// In React, values that are created by the function or the component itself are
+// usually handled with "state".
