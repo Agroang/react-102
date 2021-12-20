@@ -31,3 +31,32 @@ body {
   width: 31.31px;
   height: 26.22px;
 }
+
+/* input styling */
+.form-container {
+  margin: 35px 20%;
+}
+
+.inputs-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.input-container {
+  height: 40px;
+  width: 48%;
+  border-radius: 8px;
+  border-width: 1.5px;
+}
+
+.input-submit {
+  display: block;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(270deg, rgba(166,38,211,1) 0%, rgba(103,34,128,1) 96%);
+  width: 100%;
+  border-width: 0.5px;
+  color: white;
+  font-weight: bold;
+}
