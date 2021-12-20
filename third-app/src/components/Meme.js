@@ -64,3 +64,34 @@ export default function Meme() {
 // the func name would be setIsImportant. We would run this function based
 // on events that happen on the page (and this would change the value of the
 // variable)
+
+// A nice example of state. It increases or decrases the value of a counter
+// when you click the plus or minus button:
+// export default function App() {
+//   const [count, setCount] = React.useState(0)
+//   function add() {
+//     setCount(count + 1)
+//   }
+
+//   function substract() {
+//     setCount(count - 1)
+//   }
+
+//   function clickAddHandler() {
+//     add()
+//   }
+
+//   function clickMinusHandler() {
+//     substract()
+//   }
+
+//   return (
+//     <div className="counter">
+//       <button className="counter--minus" onClick={clickMinusHandler}>–</button>
+//       <div className="counter--count">
+//         <h1>{count}</h1>
+//       </div>
+//       <button className="counter--plus" onClick={clickAddHandler}>+</button>
+//     </div>
+//   )
+// }
