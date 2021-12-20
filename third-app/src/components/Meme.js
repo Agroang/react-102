@@ -45,6 +45,8 @@ export default function Meme() {
 //   const [whateverWeWant, func] = React.useState("Yes") (We get to call the
 //   first value whatever we want to call it, and the second we called func as
 //   it is expecting a function, we are just not passing it, yet.
+//   Ideally we will call the value something that is related to the actual
+//   value, like "isImportant" or something like that (as we get "Yes") back
 //   console.log(whateverWeWant)
 //   return (
 //     <div className="state">
