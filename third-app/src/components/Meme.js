@@ -33,3 +33,25 @@ export default function Meme() {
 // React.useState() but is often deconstructed when you import as the following:
 // import React, {useState} from "react"
 // and then used just as .useState()
+
+// If we console.log React.useState what we get back is an array that is
+// expecting a value and a function.
+
+// One way of getting the value out of the array and display it on the
+// component would be to just get the index [0] of the array but a more clean
+// is to deconstruct the array from the begginning and use that:
+
+// export default function App() {
+//   const [whateverWeWant, func] = React.useState("Yes") (We get to call the
+//   first value whatever we want to call it, and the second we called func as
+//   it is expecting a function, we are just not passing it, yet.
+//   console.log(whateverWeWant)
+//   return (
+//     <div className="state">
+//       <h1 className="state--title">Is state important to know?</h1>
+//       <div className="state--value">
+//         <h1>{whateverWeWant}</h1> Here we get the first value of the array
+//       </div>
+//     </div>
+//   )
+// }
