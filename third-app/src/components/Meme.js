@@ -98,3 +98,26 @@ export default function Meme() {
 
 // a shorter way for the above example would be to call directly onClick the
 // add or substract functions and the result should be the same
+
+// Now, using the value of state directly on the set function works BUT it's
+// best practice to do it through a callback function. That function will be
+// passed as parameter the "old" value of state.
+
+// export default function App() {
+//   const [count, setCount] = React.useState(0)
+
+//   function add() {
+//     setCount(function (oldValue) {
+//       return oldValue + 1
+//     })
+//   }
+//   ...
+
+// You can use an arrow function to shorten it, and is common to find
+// as a convention to use the name of oldValue as "prev{variable_name}"
+
+// function add() {
+//   setCount(prevCount => prevCount + 1)
+// }
+
+// The above function is the same as the one above it
