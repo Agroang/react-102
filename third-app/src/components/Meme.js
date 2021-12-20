@@ -25,4 +25,6 @@ export default function Meme() {
 // the value won't change, for it to change we need React "states".
 
 // In React, values that are created by the function or the component itself are
-// usually handled with "state".
+// usually handled with "state". A "state" is a way for React to remember saved
+// values from within a component. This is similar to declaring variables from
+// within a component.
