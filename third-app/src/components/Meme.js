@@ -20,3 +20,6 @@ export default function Meme() {
 // onClick={handleClick} (onClick is the official syntax for onClick handlers)
 // and define the function handleClick (inside the component function) but
 // before the return
+
+// Even if we update a variable to change, once it has been rendered on React
+// the value won't change, for it to change we need React "states".
