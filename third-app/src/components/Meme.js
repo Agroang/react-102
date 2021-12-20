@@ -13,3 +13,10 @@ export default function Meme() {
     </main >
   )
 }
+
+// information about React mouse handle events:
+// https://reactjs.org/docs/events.html#mouse-events
+// inside the button for example we can add:
+// onClick={handleClick} (onClick is the official syntax for onClick handlers)
+// and define the function handleClick (inside the component function) but
+// before the return
