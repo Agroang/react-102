@@ -57,3 +57,10 @@ export default function Meme() {
 //     </div>
 //   )
 // }
+
+// The naming convention for the function that we pass to the react state
+// is to use set + the name of the variable, so if we have
+// const [isImportant, func] = React.useState("Yes")
+// the func name would be setIsImportant. We would run this function based
+// on events that happen on the page (and this would change the value of the
+// variable)
