@@ -198,3 +198,11 @@ export default function Meme() {
 //       isFavorite: !prevContact.isFavorite
 //     }))
 //   }
+
+// We can not only pass states through props, but we can also pass functions
+// that we can later use on the component as an event listener
+//  <Star
+//    isFilled={contact.isFavorite}
+//    handleClick={toggleFavorite} (this is a function that will handle the click)
+//  />
+// Then on the actual component we can use that function as onClick={props.handleClick}
