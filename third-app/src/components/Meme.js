@@ -206,3 +206,8 @@ export default function Meme() {
 //    handleClick={toggleFavorite} (this is a function that will handle the click)
 //  />
 // Then on the actual component we can use that function as onClick={props.handleClick}
+
+// Passing data to components can only be done through props so if a sibling component
+// needs data you cannot pass it through the sibling, you need to raise the state
+// to the parent component and from the pass it as props (this can get tidious if
+// if it has too many layers and for that exists state managers like Redux)
