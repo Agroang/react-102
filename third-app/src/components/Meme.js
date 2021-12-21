@@ -149,3 +149,31 @@ export default function Meme() {
 //     </div>
 //   )
 // }
+
+// It's important to remember that with React we never want to modify the
+// state variable directly, so no .push for example (even if we use the
+// prevState), so here is an example of what we can do to modify the value
+// if it's needed:
+
+// function App() {
+
+//   const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
+
+//   function addItem() { //we divided it in two lines as it was getting long
+//   so because of that we added the return. We use the spread operator that
+//   will give us the whole array back and then we add the new item with the
+//   template literal)
+//     setThingsArray(prevThingsArray => {
+//       return [...prevThingsArray, `Thing ${prevThingsArray.length + 1}`]
+//     })
+//   }
+
+//   const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
+//   (we add the key here to avoid getting that error on the console)
+//   return (
+//     <div>
+//       <button onClick={addItem}>Add Item</button>
+//       {thingsElements}
+//     </div>
+//   )
+// }
