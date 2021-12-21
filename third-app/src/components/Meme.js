@@ -211,3 +211,9 @@ export default function Meme() {
 // needs data you cannot pass it through the sibling, you need to raise the state
 // to the parent component and from the pass it as props (this can get tidious if
 // if it has too many layers and for that exists state managers like Redux)
+
+// As a rule of thumb, keep the state as close as it is needed for the component
+// to use, there is no need to keep it at a parent level and pass it through
+// props if only 1 component needs it, if that is the case the component should
+// have the state. If other components need the state then you can raise it to the
+// parent level.
