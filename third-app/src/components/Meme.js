@@ -387,3 +387,37 @@ export default function Meme() {
   <button onClick={toggleShown}>{isShown ? "Hide" : "Show"} Punchline</button>
   <hr />
 </div> */
+
+// Another conditional examples, using two methods if or ternary:
+
+// export default function App() {
+//   const [messages, setMessages] = React.useState([1, 2])
+
+//   let message
+//   if (messages.length === 0) {
+//     message = <h2>You're all caught up!</h2>
+
+//   } else if (messages.length > 1) {
+//     message = <h2>You have {messages.length} unread messages</h2>
+
+//   } else {
+//     message = <h2>You have {messages.length} unread message</h2>
+
+//   }
+
+//   return (
+//     <div>
+//       {message}
+//     </div>
+//   )
+// }
+
+// second way using only ternary operators
+//   <div>
+//     {
+//       messages.length === 0 ?
+//         <h1>You're all caught up!</h1> :
+//         <h1>You have {messages.length} unread
+//         {messages.length > 1 ? "messages" : "message"}</h1>
+//     }
+//   </div>
