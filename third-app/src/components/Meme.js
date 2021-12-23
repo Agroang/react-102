@@ -265,3 +265,13 @@ export default function Meme() {
 //     </main>
 //   )
 // }
+
+
+// It is possible to create a state based on the props that come
+// from the props (derived state) and then use that to actually
+// modify the value of state based on events, nevertheless there is also
+// a "better" way that is called "unified state". The reason is that
+// if you use derived state you would have two sources of the same value,
+// the one at the App level and the new one at the component level. It
+// is better to pass a function through props that will modify the state
+// at the App level.
