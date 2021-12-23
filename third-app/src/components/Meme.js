@@ -275,3 +275,57 @@ export default function Meme() {
 // the one at the App level and the new one at the component level. It
 // is better to pass a function through props that will modify the state
 // at the App level.
+
+// To be able to do this we need to also pass the id of the object when
+// passing the function otherwise the function won't know which object
+// to target and it would target everything (I think).
+
+// Let's say that we render the following component that is comming from a
+// .map iteration
+
+//<Box
+//  key={square.id}
+//  id={square.id}
+//  on={square.on}
+//  toggle={toggle}
+///>
+
+// We are passing a toggle function and the id that is coming from the iteration
+// as well
+
+// The component itself could have the onClick as the following:
+
+
+// return (
+//   <div
+//     style={styles}
+//     className="box"
+//     onClick={() => props.toggle(props.id)}
+//   >
+//   </div>
+// )
+
+// And as mentioned, the id is comming from the props, and we pass an arrow
+// function to the event, but only use the callback function, in this case
+// the toggle with the id
+
+// That will go back to the app with the id if the clicked object.
+
+
+// function toggle(id) {
+//   setSquares(prevSquares => {
+//     return prevSquares.map((square) => {
+//       return square.id === id ? { ...square, on: !square.on } : square
+//     })
+//   })
+// }
+
+// We pass the id to the function and then we call the setSquares method to
+// change the state, we use the previous value which is a whole array of objects
+// and we return the iteration (map) that will return a new array with the
+// the updated values based on what we do on the function, in this case we use
+// a ternary to compare each object's id with the id that is comming from the
+// function and if it's true it will toggle the value of .on. We also need
+// to pass all the other properties of the object that is why we first use
+// the spare operator and also we use {} as it is an object. If it doesn't
+// match the id we simply return the object.
