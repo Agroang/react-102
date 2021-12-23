@@ -376,3 +376,14 @@ export default function Meme() {
 //     </div>
 //   )
 // }
+
+// When you need to display or hide something you use the && and when you need
+// to pick between 2 things on what to display you use a ternary (this two are
+// pretty much 90% of the conditionals you see on React)
+
+/* <div>
+  {props.setup && <h3>{props.setup}</h3>}
+  {isShown && <p>{props.punchline}</p>}
+  <button onClick={toggleShown}>{isShown ? "Hide" : "Show"} Punchline</button>
+  <hr />
+</div> */
