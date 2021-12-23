@@ -329,3 +329,17 @@ export default function Meme() {
 // to pass all the other properties of the object that is why we first use
 // the spare operator and also we use {} as it is an object. If it doesn't
 // match the id we simply return the object.
+
+// You could as well from the beginning instead of passing just the function
+// pass the id to the function as well as props, so (this is called "closure")
+
+//<Box
+//  key={square.id}
+//  on={square.on}
+//  toggle={() => toggle(square.id)}
+///>
+
+// And of the Box component it could be just like this:
+// onClick = { props.toggle }
+
+// Nevertheless the main toggle function would still be the same
