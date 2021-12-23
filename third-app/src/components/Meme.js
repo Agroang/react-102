@@ -217,3 +217,28 @@ export default function Meme() {
 // props if only 1 component needs it, if that is the case the component should
 // have the state. If other components need the state then you can raise it to the
 // parent level.
+
+// Just like in HTML, you can also style within JSX, but the syntax is a little
+// bit different. You need to pass an objet to the style property. And, as you
+// will pass an object (JS) you need to get inside curly braces, but the object
+// is also curly braces, so its a set of 2 curly braces. For that reason sometimes
+// it's better to just define that object outside JSX and just pass it to the
+// style. Also, as it is JS, even if it's background-color you should write it
+// with the JS syntax (camelCase) so it becomes backgroundColor
+
+// export default function App() {
+//   const [squares, setSquares] = React.useState(boxes)
+
+//   const styles = {
+//     backgroundColor: "black"
+//   }
+
+//   const squareElements = squares.map(square => (
+//     <div style={styles} className="box" key={square.id}></div>
+//   ))
+//   return (
+//     <main>
+//       {squareElements}
+//     </main>
+//   )
+// }
