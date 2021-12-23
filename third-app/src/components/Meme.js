@@ -343,3 +343,23 @@ export default function Meme() {
 // onClick = { props.toggle }
 
 // Nevertheless the main toggle function would still be the same
+
+// Another example of conditional rendering, remember that
+// {isShown && <p>{props.punchline}</p>} means "if isShown is true then render
+// <p>{props.punchline}</p>"
+
+// export default function Joke(props) {
+//   const [isShown, setIsShown] = React.useState(false)
+
+//   function toggleShown() {
+//     setIsShown(prevShown => !prevShown)
+//   }
+//   return (
+//     <div>
+//       {props.setup && <h3>{props.setup}</h3>}
+//       {isShown && <p>{props.punchline}</p>}
+//       <button onClick={toggleShown}>Show Punchline</button>
+//       <hr />
+//     </div>
+//   )
+// }
