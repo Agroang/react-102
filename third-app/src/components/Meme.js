@@ -242,3 +242,26 @@ export default function Meme() {
 //     </main>
 //   )
 // }
+
+// One of the major benefits of being able to use JS while styling is
+// that you can use ternary operators to change the style based on conditions.
+// Example bellow: (lets assume that the App(props) and the props come with a
+// darkMode attribute set to true)
+
+// export default function App(props) {
+//   const [squares, setSquares] = React.useState(boxes)
+//   props.darkMode
+
+//   const styles = {
+//     backgroundColor: props.darkMode ? "#222222" : "#cccccc"
+//   }
+
+//   const squareElements = squares.map(square => (
+//     <div style={styles} className="box" key={square.id}></div>
+//   ))
+//   return (
+//     <main>
+//       {squareElements}
+//     </main>
+//   )
+// }
