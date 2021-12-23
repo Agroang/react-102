@@ -363,3 +363,16 @@ export default function Meme() {
 //     </div>
 //   )
 // }
+
+// You can go even further and check for longer conditions:
+// (the h1 will render only if there are messages)
+
+// export default function App() {
+//   const [messages, setMessages] = React.useState([1, 2, 3])
+
+//   return (
+//     <div>
+//       {messages.length > 0 && <h1>You have {messages.length} unread messages!</h1>}
+//     </div>
+//   )
+// }
