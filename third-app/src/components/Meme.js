@@ -421,3 +421,36 @@ export default function Meme() {
 //         {messages.length > 1 ? "messages" : "message"}</h1>
 //     }
 //   </div>
+
+// Building forms in React is a little bit more complex than other components.
+// Usually you check for all the changes on the input and not just the final
+// value that gets submitted.
+
+// export default function Form() {
+//   const [firstName, setFirstName] = React.useState("")
+
+//   console.log(firstName)
+
+//   function handleChange(event) {
+//     setFirstName(event.target.value)
+//   }
+
+//   return (
+//     <form>
+//       <input
+//         type="text"
+//         placeholder="First Name"
+//         onChange={handleChange}
+//       />
+//     </form>
+//   )
+// }
+
+// For our handler function, we have so far ignored the parameter that you can
+// pass but usually when an event occurs you get an "event" object that has a lot
+// of information, in our case the most important one is the target property
+// that represents the DOM element and the value from it that is the actual
+// input. For the setFirstName function we don't need the previous value of the
+// state so we can just set the value to the one that comes from calling
+// event.target.value instead of re assigning a value to the prevState which is
+// never recommended.
