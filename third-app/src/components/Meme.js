@@ -454,3 +454,45 @@ export default function Meme() {
 // state so we can just set the value to the one that comes from calling
 // event.target.value instead of re assigning a value to the prevState which is
 // never recommended.
+
+// Making new states and different event handlers for each input is maneagable
+// to maybe up to 4 inputs but beyond that it's pretty hard. The best way to
+// do this is to have 1 event handler but the state itself to be an object
+// and to differentiate the inputs by giving them a name that will have the
+// same name as the key in the object:
+
+
+// export default function Form() {
+//   const [formData, setFormData] = React.useState(
+//     { firstName: "", lastName: "" }
+//   )
+
+//   function handleChange(event) {
+//     setFormData(prevFormData => {
+//       return {
+//         ...prevFormData,
+//         [event.target.name]: event.target.value // this over here is a new
+//          feature of ES6, its called "computed properties" and allow us to use
+//          the .something as a key to access the object (as long as it is
+//          inside the brackets)
+//       }
+//     })
+//   }
+
+//   return (
+//     <form>
+//       <input
+//         type="text"
+//         placeholder="First Name"
+//         onChange={handleChange}
+//         name="firstName"
+//       />
+//       <input
+//         type="text"
+//         placeholder="Last Name"
+//         onChange={handleChange}
+//         name="lastName"
+//       />
+//     </form>
+//   )
+// }
