@@ -762,3 +762,27 @@ export default function Meme() {
 // string on the state (favColor: "") but we also need to represent that, and
 // to do that we add the <option value="">-- Choose --</option> that has the
 // value of "" solving our problem.
+
+// In before HTML5 the submit was done through an input with the type of submit
+// and the value was the text that it would display. Nevertheless, with HTML5
+// if we add a button inside the form element, then it recognizes that as the
+// submit. By the type of that button will be submit so if you DON't want it
+// to be a submit button, you need to tell html that is a type="button"
+// To handle the event that occurs when we submit the form we make a new
+// function and add its handler to the form as well:
+//  <form onSubmit={handleSubmit}>
+// (the button looks just like this:  <button>Submit</button>)
+
+// function handleSubmit(event) {
+//   event.preventDefault() // to avoid the refresh and the queries in the url
+//   // submitToApi(formData), this would be if we had some kind of API call
+//      that handles the data
+//   console.log(formData) //just to prove that we have all the information
+//                          that we update
+// }
+
+// We prevent the default behaviour as it would refresh and send the info into
+// the url query as the submit was an action in HTML.
+// As shown above, as we have been updating the state with each input that
+// we make to the form, passing the information of the form to the backend
+// it's fairly easy with React.
