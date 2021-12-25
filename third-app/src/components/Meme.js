@@ -786,3 +786,11 @@ export default function Meme() {
 // As shown above, as we have been updating the state with each input that
 // we make to the form, passing the information of the form to the backend
 // it's fairly easy with React.
+
+// Usually with React you want to use the API call to set a state or to send
+// the state data to an API, one of the biggest problems that occur with this
+// is that putting the fetch inside the top level of the component and then
+// setting calling the setState will re render the component to update the
+// state, and if we render the component the fetch will be called again,
+// calling setState again with the returned data, starting an infitite loop
+// of fetches and re renderings.
