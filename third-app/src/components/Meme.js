@@ -793,4 +793,6 @@ export default function Meme() {
 // setting calling the setState will re render the component to update the
 // state, and if we render the component the fetch will be called again,
 // calling setState again with the returned data, starting an infitite loop
-// of fetches and re renderings.
+// of fetches and re renderings. To deal with this we have React's useEffect()
+
+//
