@@ -736,3 +736,29 @@ export default function Meme() {
 // formData.employment (state) and that will return a boolean, giving us the same
 // result that we had with check box. If true it will checked and if false it
 // won't, so that way only one can be checked at the same time.
+
+// Select & Option in React forms is not that hard and it's similar to what we
+// have been doing with the other form elements, so we use the value and name.
+
+// <label htmlFor="favColor">What is your favorite color?</label>
+//   <br />
+//   <select
+//       id="favColor"
+//       value={formData.favColor}
+//       onChange={handleChange}
+//       name="favColor"
+//   >
+//       <option value="">-- Choose --</option>
+//       <option value="red">Red</option>
+//       <option value="orange">Orange</option>
+//       <option value="yellow">Yellow</option>
+//       <option value="green">Green</option>
+//       <option value="blue">Blue</option>
+//       <option value="indigo">Indigo</option>
+//       <option value="violet">Violet</option>
+//   </select>
+
+// Probably one difference is that we are initializing the value as an empty
+// string on the state (favColor: "") but we also need to represent that, and
+// to do that we add the <option value="">-- Choose --</option> that has the
+// value of "" solving our problem.
