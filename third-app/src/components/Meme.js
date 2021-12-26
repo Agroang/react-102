@@ -798,4 +798,26 @@ export default function Meme() {
 // useEffect() runs AFTER the component has been rendered. The useEffect()
 // function has two parameters, the function callback (usually an arrow function)
 // and, although not necesary almost always included, an array called
-// "dependencies array".
+// "dependencies array". The values that this array have will limit "when" the
+// useEffect() function should run, otherwise it will run after every render of
+// the component. With the array, the effect run when the values that are
+// included in the array change. If we add the array but leave it empty, then
+// the function will run only with the first render of the component and never
+// again.
+
+// export default function App() {
+//   const [count, setCount] = React.useState(0)
+
+//   console.log("Component rendered")
+
+//   React.useEffect(function () {
+//     console.log("Effect function ran")
+//   }, [count])
+
+//   return (
+//     <div>
+//       <h2>The count is {count}</h2>
+//       <button onClick={() => setCount(prevCount => prevCount + 1)}>Add</button>
+//     </div>
+//   )
+// }
