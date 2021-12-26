@@ -795,4 +795,7 @@ export default function Meme() {
 // calling setState again with the returned data, starting an infitite loop
 // of fetches and re renderings. To deal with this we have React's useEffect()
 
-//
+// useEffect() runs AFTER the component has been rendered. The useEffect()
+// function has two parameters, the function callback (usually an arrow function)
+// and, although not necesary almost always included, an array called
+// "dependencies array".
