@@ -1,63 +1,102 @@
-body {
-  margin: 0px;
-}
-
 * {
     box-sizing: border-box;
 }
 
-.navbar-container {
-  display: flex;
-  height: 65px;
-  background: linear-gradient(270deg, rgba(166,38,211,1) 0%, rgba(103,34,128,1) 96%);
-  align-items: center;
-  padding: 0px 20px;
-  color: white;
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
 }
 
-.navbar-container > h1 {
-  margin-right: auto;
-  margin-bottom: 0px !important;
-  margin-top: -7px !important;
-  padding: 0px 8px;
+main {
+    padding: 36px;
 }
 
-.navbar-container > h2 {
-  margin-bottom: 0px !important;
-  margin-top: -7px !important;
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
 }
 
-.navbar-container > img {
-  width: 31.31px;
-  height: 26.22px;
+.header--image {
+    height: 100%;
+    margin-right: 6px;
 }
 
-/* input styling */
-.form-container {
-  margin: 35px 20%;
+.header--title {
+    font-size: 1.25rem;
+    margin-right: auto;
 }
 
-.inputs-container {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 8px;
+.header--project {
+    font-size: 0.75rem;
+    font-weight: 500;
 }
 
-.input-container {
-  height: 40px;
-  width: 48%;
-  border-radius: 8px;
-  border-width: 1.5px;
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+    margin-bottom: 17px;
 }
 
-.input-submit {
-  display: block;
-  height: 40px;
-  border-radius: 8px;
-  background: linear-gradient(270deg, rgba(166,38,211,1) 0%, rgba(103,34,128,1) 96%);
-  width: 100%;
-  border-width: 0.5px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
+.form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+
+.form--button {
+    grid-column: 1 / -1;
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.meme {
+    position: relative;
+}
+
+.meme--image {
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.meme--text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.top {
+    top: 0;
 }
