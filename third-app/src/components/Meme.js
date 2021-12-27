@@ -859,3 +859,25 @@ export default function Meme() {
 //     setWindowWidth(window.innerWidth)
 //   })
 // }, [])
+
+// The solution is a "clean-up function". Currently on the example above we are
+// not returning anything, and what we can do is actually return a function, that
+// will be our clean-up function.
+
+// As we want to clean up a function in this case it's better to declare it
+// outside the event listener so we can target it easier:
+
+// React.useEffect(() => {
+//   function watchWidth() { // we declare the function
+//     console.log("Setting up...") // just for us to see when it's used
+//     setWindowWidth(window.innerWidth)
+//   }
+
+//   window.addEventListener("resize", watchWidth) // resize is an event
+
+//   return function () { //this is the cleanup function
+//     console.log("Cleaning up...") // for us to see, if the component is
+//     // unmounted this will be run
+//     window.removeEventListener("resize", watchWidth)
+//   }
+// }, [])
