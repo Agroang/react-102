@@ -844,3 +844,18 @@ export default function Meme() {
 // }
 
 //
+
+// There is a common problem when using useEffect() and that is what it is known
+// as a "memory leak". If we have a conditional rendering of a component, and
+// that component is using useEffect, let's say we are listening for window
+// events, even if the component is unmounted, the event is still there and it
+// will try to run the event listener, generating a warning of memory leak on
+// the console.
+
+// (example of a use effect in a component that is conditionally rendered)
+
+// React.useEffect(() => {
+//   window.addEventListener("resize", function () {
+//     setWindowWidth(window.innerWidth)
+//   })
+// }, [])
