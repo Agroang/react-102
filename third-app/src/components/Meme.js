@@ -982,3 +982,10 @@ export default function Meme() {
 // With the above, the lazy initialization is done, it will run the first time
 // and only when its setState is run, not with every re render, making the app
 // more efficient.
+
+// Whenever you need to pass more than the event to the event function you
+// should always pass the function as a callback function otherwise you will
+// get other events, so the correct way should look something like:
+// onClick={(event) => props.deleteNote(event, note.id)}
+// (getting the function from props and passing the correct event, also as
+// I need the note's id I am passing note.id, so it needs 2 parameters)
