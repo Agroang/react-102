@@ -960,3 +960,25 @@ export default function Meme() {
 //   }
 //   getMemes()
 // }, [])
+
+// "Lazy State Initialization" : As we know, React re renders a component
+// each time a state changes to update it. Because of that it is making
+// calls of functions each time that happens. If it's a simple console.log
+// it doesn't take too much for the browser to handle, even if it's a lot of
+// times, but if it's a localStorage call, or an API call, or something like
+// that, it will be taxing. For that, "Lazy State Initialization" exists,
+// pretty much trying to initialize a state only one time.
+
+// For example, if we have this:
+// const [state, setState] = React.useState(console.log("State initialization"))
+// It will be run everytime that a state somewhere changes, as the component is
+// re rendered. To make it a lazy state initialization what we need to do is
+// to make the initial value not an actual value, but a function:
+
+// const [state, setState] = React.useState(
+//   () => console.log("State initialization")
+// )
+
+// With the above, the lazy initialization is done, it will run the first time
+// and only when its setState is run, not with every re render, making the app
+// more efficient.
