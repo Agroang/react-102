@@ -364,7 +364,17 @@ export default function Meme() {
 // the toggle with the id
 
 // That will go back to the app with the id if the clicked object.
+// Another, shorter way of calling a function that needs an id for example,
+// could be making the function get the id before it's passed as a prop. The,
+// way to do this is to make the function an anonymous one:
 
+// const diceElements = dice.map(die => (
+// <Die key={die.id} value={die.value} isHeld={die.isHeld} holdDice={() => holdDice(die.id)} />
+//    ))
+
+// We could pass the id as id={die.id} and separately the function as
+// holdDice={holdDice} and call the function on Die as an anonymous one passing
+// the id that get through props there, but the above way is faster.
 
 // function toggle(id) {
 //   setSquares(prevSquares => {
