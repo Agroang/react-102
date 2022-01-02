@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// <img src={logo} className="App-logo" alt="logo" />
+import React from "react"
+import Questions from './components/Questions';
+import Landing from './components/Landing';
 
-function App() {
+
+export default function App() {
+  // here state if true question, if false landing?
+  // const [display, setDisplay] = React.setState(true)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Landing />
+      <Questions />
     </div>
   );
 }
-
-export default App;
