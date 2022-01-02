@@ -1003,3 +1003,19 @@ export default function Meme() {
 // Keeping to pieces of internal state in sync is also a very good reason
 // to use useEffect() as it will be checking for the state changes (as the
 // second parameter)
+
+// array.every() is quite handy, it let us check for a condition that it will
+// return true if it's true for all the elements inside the array. You can use
+// a callback function to check for every element on the array, for example:
+
+// React.useEffect(() => {
+//   const allHeld = dice.every(die => die.isHeld) //every die.isHeld property
+//                                                   is checked here
+//   const firstValue = dice[0].value   //use as a reference value to check
+//                                        all the other values later with .every
+//   const allSameValue = dice.every(die.value === firstValue)
+//   if (allHeld && allSameValue) {
+//     setTenzies(true)
+//     console.log("You won!")
+//   }
+// }, [dice])
