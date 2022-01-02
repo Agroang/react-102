@@ -999,3 +999,7 @@ export default function Meme() {
 // onClick={(event) => props.deleteNote(event, note.id)}
 // (getting the function from props and passing the correct event, also as
 // I need the note's id I am passing note.id, so it needs 2 parameters)
+
+// Keeping to pieces of internal state in sync is also a very good reason
+// to use useEffect() as it will be checking for the state changes (as the
+// second parameter)
