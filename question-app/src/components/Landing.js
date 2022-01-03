@@ -1,12 +1,31 @@
 import React from "react"
-import Questions from './components/Questions';
+import Questions from "./Questions"
 
 export default function Landing() {
+  const [display, setDisplay] = React.useState(false)
 
-  // here state if true question, if false landing?
-  // const [display, setDisplay] = React.setState(true)
+  function toggle() {
+    setDisplay((oldDisplay) => !oldDisplay)
+    console.log(display)
+  }
+
+  // example on how to style
+  // const styles = {
+  //   display: "none"
+  // }
+
+  console.log(display)
+
   return (
-    <Questions />
+    <div className="main-container">
+      {!display &&
+        <div>
+          <h1>Super Quizzzzzzz!!!</h1>
+          <h2>Amazing description about a lot of useful stuff</h2>
+          <button onClick={toggle}>Start Quiz!</button>
+        </div>
+      }
+      {display && <Questions />}
+    </div>
   )
 }
-// landing should be rendering questions on click??
