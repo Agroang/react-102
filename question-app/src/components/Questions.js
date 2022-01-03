@@ -7,6 +7,14 @@ export default function Questions() {
   // getting back from that fetch
 
   return (
-    <h1>test from questions</h1>
+    <div className="questions-container">
+      <h1>Question here</h1>
+      <div className="options-container">
+        <button>Option 1</button>
+        <button>Option 2</button>
+        <button>Option 3</button>
+        <button>Option 4</button>
+      </div>
+    </div>
   )
 }

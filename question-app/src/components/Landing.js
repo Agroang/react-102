@@ -10,7 +10,7 @@ export default function Landing() {
   }
 
   return (
-    <div className="main-container">
+    <div>
       {!display &&
         <div className="landing-container">
           <h1>Super Quizzzzzzz!!!</h1>

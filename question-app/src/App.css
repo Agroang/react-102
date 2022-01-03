@@ -21,3 +21,13 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.questions-container {
+  border: 1px solid red;
+  margin: 5%;
+  padding: 10px 40px;
+}
+
+.options-container {
+  display: flex;
+}
