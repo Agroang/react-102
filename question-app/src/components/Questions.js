@@ -6,6 +6,8 @@ export default function Questions() {
   // need to map to create the component, need to check what data I am
   // getting back from that fetch
 
+  //when mapping i need to create a variable that will be rendered
+
   return (
     <div className="questions-container">
       <h1>Question here</h1>
@@ -15,6 +17,8 @@ export default function Questions() {
         <button>Option 3</button>
         <button>Option 4</button>
       </div>
+      <hr />
+      <button>Check Answers</button>
     </div>
   )
 }
