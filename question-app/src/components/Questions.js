@@ -2,7 +2,15 @@ import React from "react"
 
 export default function Questions() {
 
+  // need an state that will hold the value of the fetch
+
+  // api url bellow, just need to fetch with with useEffect
+  // https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple
+
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
+  // but also need to remake if they want to play again with a different set
+  // of questions
+
   // need to map to create the component, need to check what data I am
   // getting back from that fetch
 
