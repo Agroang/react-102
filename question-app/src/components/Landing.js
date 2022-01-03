@@ -9,13 +9,6 @@ export default function Landing() {
     console.log(display)
   }
 
-  // example on how to style
-  // const styles = {
-  //   display: "none"
-  // }
-
-  console.log(display)
-
   return (
     <div className="main-container">
       {!display &&
