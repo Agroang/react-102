@@ -1,8 +1,12 @@
 import React from "react"
+import Questions from './components/Questions';
 
 export default function Landing() {
+
+  // here state if true question, if false landing?
+  // const [display, setDisplay] = React.setState(true)
   return (
-    <h1>test from landing</h1>
+    <Questions />
   )
 }
 // landing should be rendering questions on click??
