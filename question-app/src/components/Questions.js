@@ -10,7 +10,17 @@ export default function Questions() {
       .then(data => setQuestionsData(data))
   }, [])
 
-  console.log(questionsData)
+  console.log(questionsData.results)
+  // this is an array of objects, each object it's like the following:
+  //need to map through questionsData.results
+
+  // category: "Entertainment: Video Games"
+  // correct_answer: "ZUN"
+  // difficulty: "medium"
+  // incorrect_answers: (3)['SUN', 'RUN', 'PUN']
+  // question: "The creator of the Touhou Project series is:"
+  // type: "multiple"
+
 
   // api url bellow, just need to fetch with with useEffect
   // https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple
