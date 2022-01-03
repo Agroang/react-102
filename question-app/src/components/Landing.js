@@ -19,7 +19,7 @@ export default function Landing() {
   return (
     <div className="main-container">
       {!display &&
-        <div>
+        <div className="landing-container">
           <h1>Super Quizzzzzzz!!!</h1>
           <h2>Amazing description about a lot of useful stuff</h2>
           <button onClick={toggle}>Start Quiz!</button>
