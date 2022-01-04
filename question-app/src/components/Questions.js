@@ -55,6 +55,12 @@ export default function Questions() {
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
+  // myabe the options should be an array with objects including the
+  // held, text, id? initialize as an empty array with an empty object,
+  // set when I have the information while doing the mapping?
+  // but then, will it have ALL the options? how to link each set of
+  // options with their question? think about this problem
+
   return (
       <div>
         {testingElements}
