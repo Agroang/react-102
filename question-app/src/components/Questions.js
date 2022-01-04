@@ -34,13 +34,18 @@ export default function Questions() {
   }
 
   // for testing output
-  dataArray.map(question => console.log(question.correct_answer))
+  dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
   const testingElements = dataArray.map(item => {
- //   const answersArray = []
+    const answersArray = []
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
+        <div className="options-container">
+          { answersArray.push(item.correct_answer) }
+          { item.incorrect_answers.forEach(incorrectAnswer =>
+          { return answersArray.push(incorrectAnswer) }) }
+        </div>
       </div>
       )
   })
