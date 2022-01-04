@@ -31,3 +31,12 @@ body {
 .options-container {
   display: flex;
 }
+
+.check-answers-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.check-answers-button-container > button {
+  font-size: 30px;
+}

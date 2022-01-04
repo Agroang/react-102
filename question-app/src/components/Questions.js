@@ -62,10 +62,13 @@ export default function Questions() {
   // also a "1 appearing, worst case scenario y use regular js to target
   // and delete that 1 .....theres gotta a better way!!!"
 
+  // the biggest div needs margin! or padding, something
   return (
       <div>
         {testingElements}
-        <button>Check Answers</button>
+        <div className="check-answers-button-container">
+          <button>Check Answers</button>
+        </div>
       </div>
 
   )
