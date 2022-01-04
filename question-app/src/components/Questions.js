@@ -39,24 +39,44 @@ export default function Questions() {
 
 
   // so far working one, when api is not broken
+  // const testingElements = dataArray.map(item => {
+  //   const answersArray = []
+  //   return (
+  //     <div className="questions-container">
+  //       <h1>{item.question}</h1>
+  //       <div className="options-container">
+  //         { answersArray.push(item.correct_answer) }
+  //         { item.incorrect_answers.forEach(incorrectAnswer =>
+  //         { return answersArray.push(incorrectAnswer) }) }
+  //         { shuffle(answersArray) }
+  //         { answersArray.forEach(option => {
+  //           return <h2>{option}</h2>
+  //         }) }
+  //       </div>
+  //       <hr />
+  //     </div>
+  //     )
+  // })
+
+  // testing copy to find the "1" as an option:
   const testingElements = dataArray.map(item => {
     const answersArray = []
+    answersArray.push(item.correct_answer)
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
         <div className="options-container">
-          { answersArray.push(item.correct_answer) }
-          { item.incorrect_answers.forEach(incorrectAnswer =>
-          { return answersArray.push(incorrectAnswer) }) }
-          { shuffle(answersArray) }
-          { answersArray.forEach(option => {
+          {item.incorrect_answers.forEach(incorrectAnswer => { return answersArray.push(incorrectAnswer) })}
+          {shuffle(answersArray)}
+          {answersArray.forEach(option => {
             return <h2>{option}</h2>
-          }) }
+          })}
         </div>
         <hr />
       </div>
-      )
+    )
   })
+
 
   // final button appearing at the top button, make bigger!
   // also a "1 appearing, worst case scenario y use regular js to target
