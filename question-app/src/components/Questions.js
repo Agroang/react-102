@@ -58,7 +58,9 @@ export default function Questions() {
       )
   })
 
-    // make an array for each question, shuffle, display as button
+  // final button no appearing, also a "1 appearing, worst case scenario y
+  // render it as a component? the button and use regular js to target
+  // and delete that 1 .....theres gotta a better way!!!"
 
   return (
       <div>
