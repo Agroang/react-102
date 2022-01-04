@@ -11,6 +11,8 @@ export default function Questions() {
   }, [])
 
   const dataArray = questionsData.results
+  //testing if fetch working
+  console.log(dataArray)
 
   // category: "Entertainment: Video Games"
   // correct_answer: "ZUN"
@@ -19,16 +21,11 @@ export default function Questions() {
   // question: "The creator of the Touhou Project series is:"
   // type: "multiple"
 
-
-  // api url bellow, just need to fetch with with useEffect
-  // https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple
-
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
   // of questions when a value is changed, need to create that state
 
-
-
+  // function to shuffle options
   function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -36,12 +33,11 @@ export default function Questions() {
     }
   }
 
-  // dataArray.map(question => console.log(question.question))
-
-
+  // for testing output
+  dataArray.map(question => console.log(question.correct_answer))
 
   const testingElements = dataArray.map(item => {
-    const answersArray = []
+ //   const answersArray = []
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
