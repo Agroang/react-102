@@ -58,8 +58,8 @@ export default function Questions() {
       )
   })
 
-  // final button no appearing, also a "1 appearing, worst case scenario y
-  // render it as a component? the button and use regular js to target
+  // final button appearing at the top button, make bigger!
+  // also a "1 appearing, worst case scenario y use regular js to target
   // and delete that 1 .....theres gotta a better way!!!"
 
   return (
