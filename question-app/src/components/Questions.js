@@ -14,13 +14,6 @@ export default function Questions() {
   //testing if fetch working
   console.log(dataArray)
 
-  // category: "Entertainment: Video Games"
-  // correct_answer: "ZUN"
-  // difficulty: "medium"
-  // incorrect_answers: (3)['SUN', 'RUN', 'PUN']
-  // question: "The creator of the Touhou Project series is:"
-  // type: "multiple"
-
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
   // of questions when a value is changed, need to create that state
@@ -37,28 +30,7 @@ export default function Questions() {
   // for testing output
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
-
-  // so far working one, when api is not broken
-  // const testingElements = dataArray.map(item => {
-  //   const answersArray = []
-  //   return (
-  //     <div className="questions-container">
-  //       <h1>{item.question}</h1>
-  //       <div className="options-container">
-  //         { answersArray.push(item.correct_answer) }
-  //         { item.incorrect_answers.forEach(incorrectAnswer =>
-  //         { return answersArray.push(incorrectAnswer) }) }
-  //         { shuffle(answersArray) }
-  //         { answersArray.forEach(option => {
-  //           return <h2>{option}</h2>
-  //         }) }
-  //       </div>
-  //       <hr />
-  //     </div>
-  //     )
-  // })
-
-  // testing copy to find the "1" as an option:
+ // so far working one, when api is not broken
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
@@ -77,12 +49,12 @@ export default function Questions() {
     )
   })
 
-
-  // final button appearing at the top button, make bigger!
-  // also a "1 appearing, worst case scenario y use regular js to target
-  // and delete that 1 .....theres gotta a better way!!!"
-
   // the biggest div needs margin! or padding, something
+  // each h2 (option) needs a click event, save some state, something
+  // like held on the dice game, on click change value to held (true)
+  // if held change color background, save in an array or something?
+  // check the dice example for an idea
+
   return (
       <div>
         {testingElements}
