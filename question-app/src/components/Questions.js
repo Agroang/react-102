@@ -26,16 +26,19 @@ export default function Questions() {
   // of questions when a value is changed, need to create that state
 
   // function to shuffle options
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+      [a[i], a[j]] = [a[j], a[i]];
     }
+    return a;
   }
 
   // for testing output
-  dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
+  // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
+
+  // so far working one, when api is not broken
   const testingElements = dataArray.map(item => {
     const answersArray = []
     return (
@@ -45,24 +48,15 @@ export default function Questions() {
           { answersArray.push(item.correct_answer) }
           { item.incorrect_answers.forEach(incorrectAnswer =>
           { return answersArray.push(incorrectAnswer) }) }
+          { shuffle(answersArray) }
+          { answersArray.forEach(option => {
+            return <h2>{option}</h2>
+          }) }
         </div>
+        <hr />
       </div>
       )
   })
-  // const questionElements = dataArray.map(question =>
-  //    <div className="questions-container">
-  //       <h1>{question.question}</h1>
-  //       <div className="options-container">
-  //         { answersArray.push(question.correct_answer) }
-  //         { question.incorrect_answers.forEach(incorrectAnswer =>
-  //         { answersArray.push(incorrectAnswer) }) }
-  //         { shuffle(answersArray).forEach(option => {
-  //           <button>{option}</button>
-  //         }) }
-  //       </div>
-  //       <hr />
-  //     </div>
-  //   )
 
     // make an array for each question, shuffle, display as button
 
