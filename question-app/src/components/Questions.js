@@ -10,9 +10,7 @@ export default function Questions() {
       .then(data => setQuestionsData(data))
   }, [])
 
-  console.log(questionsData.results)
-  // this is an array of objects, each object it's like the following:
-  //need to map through questionsData.results
+  const dataArray = questionsData.results
 
   // category: "Entertainment: Video Games"
   // correct_answer: "ZUN"
@@ -29,22 +27,40 @@ export default function Questions() {
   // but also need to remake if they want to play again with a different set
   // of questions when a value is changed, need to create that state
 
-  // need to map to create the component, need to check what data I am
-  // getting back from that fetch
 
-  //when mapping i need to create a variable that will be rendered
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  dataArray.map(question => console.log(question.question))
+
+  const answersArray = []
+  // const questionElements = dataArray.map(question =>
+  //    <div className="questions-container">
+  //       <h1>{question.question}</h1>
+  //       <div className="options-container">
+  //         { answersArray.push(question.correct_answer) }
+  //         { question.incorrect_answers.forEach(incorrectAnswer =>
+  //         { answersArray.push(incorrectAnswer) }) }
+  //         { shuffle(answersArray).forEach(option => {
+  //           <button>{option}</button>
+  //         }) }
+  //       </div>
+  //       <hr />
+  //     </div>
+  //   )
+
+    // make an array for each question, shuffle, display as button
 
   return (
-    <div className="questions-container">
-      <h1>Question here</h1>
-      <div className="options-container">
-        <button>Option 1</button>
-        <button>Option 2</button>
-        <button>Option 3</button>
-        <button>Option 4</button>
+      <div>
+        {/* {questionElements} */}
+        <button>Check Answers</button>
       </div>
-      <hr />
-      <button>Check Answers</button>
-    </div>
+
   )
 }
