@@ -36,9 +36,18 @@ export default function Questions() {
     }
   }
 
-  dataArray.map(question => console.log(question.question))
+  // dataArray.map(question => console.log(question.question))
 
-  const answersArray = []
+
+
+  const testingElements = dataArray.map(item => {
+    const answersArray = []
+    return (
+      <div className="questions-container">
+        <h1>{item.question}</h1>
+      </div>
+      )
+  })
   // const questionElements = dataArray.map(question =>
   //    <div className="questions-container">
   //       <h1>{question.question}</h1>
@@ -58,7 +67,7 @@ export default function Questions() {
 
   return (
       <div>
-        {/* {questionElements} */}
+        {testingElements}
         <button>Check Answers</button>
       </div>
 
