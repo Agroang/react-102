@@ -40,13 +40,14 @@ export default function Questions() {
     shuffle(answersArray)
     console.log(answersArray)
 
+    const optionElements =  answersArray.map(option => (<Option option={option} />)
+      )
+    console.log(optionElements)
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
         <div className="options-container">
-          {answersArray.forEach(option => (<Option option={option} />)
-          )}
-          <p>test</p>
+          {optionElements}
         </div>
         <hr />
       </div>
