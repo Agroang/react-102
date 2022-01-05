@@ -1,4 +1,5 @@
 import React from "react"
+import removeMarkdown from "markdown-to-text";
 import Option from "./Option"
 
 export default function Questions() {
@@ -32,19 +33,22 @@ export default function Questions() {
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
  // so far working one, WHEN api is not broken, fix with error asyn/wait??
+ // sanitized title up to a point, still missing some markdown...not always appearing
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
     item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
     shuffle(answersArray)
     // console.log(answersArray)
-
+    const markdownTitle = item.question; removeMarkdown(markdownTitle);
+    const sanitizedTitle = markdownTitle.replaceAll('&quot;','"')
     const optionElements =  answersArray.map(option => (<Option option={option} />)
       )
     // console.log(optionElements)
+
     return (
       <div className="questions-container">
-        <h1>{item.question}</h1>
+        <h1>{sanitizedTitle}</h1>
         <div className="options-container">
           {optionElements}
         </div>
