@@ -32,17 +32,16 @@ export default function Questions() {
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
  // so far working one, WHEN api is not broken, fix with error asyn/wait??
- // displaying options as text, not as actual options, will try component
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
     item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
     shuffle(answersArray)
-    console.log(answersArray)
+    // console.log(answersArray)
 
     const optionElements =  answersArray.map(option => (<Option option={option} />)
       )
-    console.log(optionElements)
+    // console.log(optionElements)
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
