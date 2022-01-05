@@ -6,7 +6,6 @@ export default function Landing() {
 
   function toggle() {
     setDisplay((oldDisplay) => !oldDisplay)
-    console.log(display)
   }
 
   return (

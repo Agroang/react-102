@@ -14,6 +14,8 @@ export default function Questions() {
   // }
 
   // "working" but breaking from time to time
+  // getting undefined first time, and only works after i comment out, check the
+  // scrimba about async
   React.useEffect(function () {
     fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
       .then(res => res.json())
