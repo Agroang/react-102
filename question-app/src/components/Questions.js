@@ -1,4 +1,5 @@
 import React from "react"
+import Option from "./Option"
 
 export default function Questions() {
 
@@ -30,19 +31,22 @@ export default function Questions() {
   // for testing output
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
- // so far working one, when api is not broken
+ // so far working one, WHEN api is not broken, fix with error asyn/wait??
+ // displaying options as text, not as actual options, will try component
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
+    item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
+    shuffle(answersArray)
+    console.log(answersArray)
+
     return (
       <div className="questions-container">
         <h1>{item.question}</h1>
         <div className="options-container">
-          {item.incorrect_answers.forEach(incorrectAnswer => { return answersArray.push(incorrectAnswer) })}
-          {shuffle(answersArray)}
-          {answersArray.forEach(option => {
-            return <h2>{option}</h2>
-          })}
+          {answersArray.forEach(option => (<Option option={option} />)
+          )}
+          <p>test</p>
         </div>
         <hr />
       </div>

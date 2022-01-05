@@ -40,3 +40,7 @@ body {
 .check-answers-button-container > button {
   font-size: 30px;
 }
+
+.button-option-container {
+  border: 1px solid red;
+}
