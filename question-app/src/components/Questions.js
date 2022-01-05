@@ -1,5 +1,6 @@
 import React from "react"
-import removeMarkdown from "markdown-to-text";
+import removeMarkdown from "markdown-to-text"
+import { nanoid } from 'nanoid'
 import Option from "./Option"
 
 export default function Questions() {
@@ -42,7 +43,7 @@ export default function Questions() {
     // console.log(answersArray)
     const markdownTitle = item.question; removeMarkdown(markdownTitle);
     const sanitizedTitle = markdownTitle.replaceAll('&quot;','"')
-    const optionElements =  answersArray.map(option => (<Option option={option} />)
+    const optionElements = answersArray.map(option => (<Option option={option} id={nanoid()} selected={false}/>)
       )
     // console.log(optionElements)
 
@@ -63,11 +64,9 @@ export default function Questions() {
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
-  // myabe the options should be an array with objects including the
-  // held, text, id? initialize as an empty array with an empty object,
-  // set when I have the information while doing the mapping?
-  // but then, will it have ALL the options? how to link each set of
-  // options with their question? think about this problem
+  // each option has an id now, will help with the selected option
+  // each option has a selected(to false) option now, need a function
+  // that toggles that, and a use effect that follows that?...not sure
 
   return (
       <div>
