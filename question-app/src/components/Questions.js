@@ -7,11 +7,26 @@ export default function Questions() {
 
   const [questionsData, setQuestionsData] = React.useState({})
 
+  // testing async fetch
+  // async function fetchQuiz() {
+  //   const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
+  //   await response.json();
+  // }
+
+  // "working" but breaking from time to time
   React.useEffect(function () {
     fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
       .then(res => res.json())
       .then(data => setQuestionsData(data))
   }, [])
+
+  // worth checking:
+  // https://www.robinwieruch.de/react-hooks-fetch-data/
+  // copy of above for testing using async
+  // React.useEffect(() => {
+  //   fetchQuiz()
+  //     .then(data => setQuestionsData(data))
+  // }, [])
 
   const dataArray = questionsData.results
   //testing if fetch working
