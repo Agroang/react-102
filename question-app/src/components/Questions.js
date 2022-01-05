@@ -58,6 +58,7 @@ export default function Questions() {
     // console.log(answersArray)
     const markdownTitle = item.question; removeMarkdown(markdownTitle);
     const sanitizedTitle = markdownTitle.replaceAll('&quot;','"')
+    // &039; = ' , need to change for title and options!
     const optionElements = answersArray.map(option => (<Option option={option} id={nanoid()} selected={false}/>)
       )
     // console.log(optionElements)
