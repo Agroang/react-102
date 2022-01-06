@@ -54,31 +54,31 @@ export default function Questions() {
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
  // so far working one
-  // const testingElements = dataArray.map(item => {
-  //   const answersArray = []
-  //   answersArray.push(item.correct_answer)
-  //   item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
-  //   shuffle(answersArray)
-  //   const markdownTitle = item.question; removeMarkdown(markdownTitle);
-  //   const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
-  //   const optionElements = answersArray.map(option =>
-  //     (<Option
-  //       option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
-  //       id={nanoid()}
-  //       selected={false}
-  //     />)
-  //     )
+  const testingElements = dataArray.map(item => {
+    const answersArray = []
+    answersArray.push(item.correct_answer)
+    item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
+    shuffle(answersArray)
+    const markdownTitle = item.question; removeMarkdown(markdownTitle);
+    const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
+    const optionElements = answersArray.map(option =>
+      (<Option
+        option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
+        id={nanoid()}
+        selected={false}
+      />)
+      )
 
-  //   return (
-  //     <div className="questions-container">
-  //       <h1>{sanitizedTitle}</h1>
-  //       <div className="options-container">
-  //         {optionElements}
-  //       </div>
-  //       <hr />
-  //     </div>
-  //   )
-  // })
+    return (
+      <div className="questions-container">
+        <h1>{sanitizedTitle}</h1>
+        <div className="options-container">
+          {optionElements}
+        </div>
+        <hr />
+      </div>
+    )
+  })
 
   // the biggest div needs margin! or padding, something
   // each h2 (option) needs a click event, save some state, something
@@ -88,7 +88,7 @@ export default function Questions() {
 
   return (
       <div>
-        {/* {testingElements} */}
+        {testingElements}
         <div className="check-answers-button-container">
           <button>Check Answers</button>
         </div>
