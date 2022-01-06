@@ -5,9 +5,9 @@ import Option from "./Option"
 
 export default function Questions() {
 
-  const [questionsData, setQuestionsData] = React.useState({})
+  const [questionsData, setQuestionsData] = React.useState([])
   // state to handle new data
-  const [newQuiz, setNewQuiz] = React.useState({})
+  // const [newQuiz, setNewQuiz] = React.useState({})
 
   // "working" but breaking from time to time
   // getting undefined first time, and only works after i comment out
@@ -19,25 +19,28 @@ export default function Questions() {
 
   // copy of above for testing using async
   React.useEffect(() => {
-    async function fetchQuiz() {
-    const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
-    const data = await response.json()
-    console.log(data)
-    setQuestionsData(data)
-    console.log(data)
-    if (data === {}) {
-      console.log("this aint working")
-    }
-  }
-    fetchQuiz()
-  }, [newQuiz])
+    const url = 'https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple'
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url);
+        const json = await response.json();
+        setQuestionsData(json);
+      } catch (error) {
+        console.log("error", error)
+      }
+    };
+    fetchData();
+  }, [])
+
+
   // make if data is empty dont run the map and just console log
   // console.log(questionsData)
   // maybe use componentdidmountmethod? o agregar errores con if
   // https://reactjs.org/docs/faq-ajax.html
   const dataArray = questionsData.results
   //testing if fetch working
-  // console.log(dataArray)
+  console.log(dataArray)
 
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
@@ -57,18 +60,21 @@ export default function Questions() {
 
  // so far working one, WHEN api is not broken, fix with error asyn/wait??
  // sanitized title up to a point, still missing some markdown...not always appearing
+
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
     item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
     shuffle(answersArray)
-    // console.log(answersArray)
+  //   // console.log(answersArray)
     const markdownTitle = item.question; removeMarkdown(markdownTitle);
     const sanitizedTitle = markdownTitle.replaceAll('&quot;','"')
-    // &039; = ' , need to change for title and options!
+  //   // &039; = ' , need to change for title and options!
+  //  // &#039; = '
+  //  // &amp; = & , need to change for title and options!
     const optionElements = answersArray.map(option => (<Option option={option} id={nanoid()} selected={false}/>)
       )
-    // console.log(optionElements)
+  //   // console.log(optionElements)
 
     return (
       <div className="questions-container">
