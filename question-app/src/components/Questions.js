@@ -54,7 +54,9 @@ export default function Questions() {
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
  // so far working one
-  const testingElements = dataArray.map(item => {
+  let testingElements
+  if (dataArray !== undefined) {
+  testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
     item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
@@ -79,6 +81,8 @@ export default function Questions() {
       </div>
     )
   })
+    return testingElements
+  }
 
   // the biggest div needs margin! or padding, something
   // each h2 (option) needs a click event, save some state, something
@@ -89,6 +93,7 @@ export default function Questions() {
   return (
       <div>
         {testingElements}
+        {!dataArray && <h1>Loading...</h1>}
         <div className="check-answers-button-container">
           <button>Check Answers</button>
         </div>
