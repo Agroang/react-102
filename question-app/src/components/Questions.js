@@ -16,14 +16,15 @@ export default function Questions() {
   // }, [])
 
   // copy of above for testing using async
-  React.useEffect(() => {
-    async function fetchQuiz() {
-    const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
-    const data = await response.json()
-    setQuestionsData(data)
-  }
-    fetchQuiz()
-  }, [])
+  // React.useEffect(() => {
+  //   async function fetchQuiz() {
+  //   const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
+  //   handleErrors(response)
+  //   const data = await response.json()
+  //   setQuestionsData(data)
+  // }
+  //   fetchQuiz()
+  // }, [])
 
   const dataArray = questionsData.results
   //testing if fetch working
