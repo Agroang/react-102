@@ -90,6 +90,8 @@ export default function Questions() {
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
+  // change loading to a big fat button or something
+  // start actually trying to save selected and see if i need radio buttons
   return (
       <div>
         {testingElements}
