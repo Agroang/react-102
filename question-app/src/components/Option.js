@@ -3,8 +3,20 @@ import removeMarkdown from "markdown-to-text";
 
 export default function Option(props) {
   const markdown = props.option;removeMarkdown(markdown);
+  const [selected, setSelected] = React.useState(props.selected)
+
+  function handleClick() {
+    setSelected(oldSelected => !oldSelected)
+  }
+
+  const selectedColor = selected ? "blue" : "white"
+  const styles = {
+    backgroundColor: selectedColor
+  }
   return(
-    <button className="button-option-container">{markdown}</button>
+    <button className="button-option-container" onClick={handleClick} style={styles}>
+      {markdown}
+    </button>
   )
 }
 
