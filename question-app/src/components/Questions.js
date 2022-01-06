@@ -7,28 +7,23 @@ export default function Questions() {
 
   const [questionsData, setQuestionsData] = React.useState({})
 
-  // testing async fetch
-  // async function fetchQuiz() {
-  //   const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
-  //   await response.json();
-  // }
-
   // "working" but breaking from time to time
-  // getting undefined first time, and only works after i comment out, check the
-  // scrimba about async
-  React.useEffect(function () {
-    fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
-      .then(res => res.json())
-      .then(data => setQuestionsData(data))
-  }, [])
-
-  // worth checking:
-  // https://www.robinwieruch.de/react-hooks-fetch-data/
-  // copy of above for testing using async
-  // React.useEffect(() => {
-  //   fetchQuiz()
+  // getting undefined first time, and only works after i comment out
+  // React.useEffect(function () {
+  //   fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
+  //     .then(res => res.json())
   //     .then(data => setQuestionsData(data))
   // }, [])
+
+  // copy of above for testing using async
+  React.useEffect(() => {
+    async function fetchQuiz() {
+    const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
+    const data = await response.json()
+    setQuestionsData(data)
+  }
+    fetchQuiz()
+  }, [])
 
   const dataArray = questionsData.results
   //testing if fetch working
