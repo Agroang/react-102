@@ -9,7 +9,7 @@ export default function Questions() {
   // state to handle new data
   // const [newQuiz, setNewQuiz] = React.useState({})
 
-  // "working" but breaking from time to time
+  // "working" without async function, as backup
   // getting undefined first time, and only works after i comment out
   // React.useEffect(function () {
   //   fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
@@ -17,7 +17,7 @@ export default function Questions() {
   //     .then(data => setQuestionsData(data))
   // }, [])
 
-  // copy of above for testing using async
+  // same as above but using async
   React.useEffect(() => {
     const url = 'https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple'
 
@@ -33,11 +33,6 @@ export default function Questions() {
     fetchData();
   }, [])
 
-
-  // make if data is empty dont run the map and just console log
-  // console.log(questionsData)
-  // maybe use componentdidmountmethod? o agregar errores con if
-  // https://reactjs.org/docs/faq-ajax.html
   const dataArray = questionsData.results
   //testing if fetch working
   console.log(dataArray)
@@ -58,20 +53,14 @@ export default function Questions() {
   // for testing output
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
- // so far working one, WHEN api is not broken, fix with error asyn/wait??
- // sanitized title up to a point, still missing some markdown...not always appearing
-
+ // so far working one
   const testingElements = dataArray.map(item => {
     const answersArray = []
     answersArray.push(item.correct_answer)
     item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
     shuffle(answersArray)
-  //   // console.log(answersArray)
     const markdownTitle = item.question; removeMarkdown(markdownTitle);
     const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
-  //   // &039; = ' , need to change for title and options!
-  //  // &#039; = '
-  //  // &amp; = & , need to change for title and options!
     const optionElements = answersArray.map(option =>
       (<Option
         option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
@@ -79,7 +68,6 @@ export default function Questions() {
         selected={false}
       />)
       )
-  //   // console.log(optionElements)
 
     return (
       <div className="questions-container">
