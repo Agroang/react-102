@@ -72,7 +72,12 @@ export default function Questions() {
   //   // &039; = ' , need to change for title and options!
   //  // &#039; = '
   //  // &amp; = & , need to change for title and options!
-    const optionElements = answersArray.map(option => (<Option option={option} id={nanoid()} selected={false}/>)
+    const optionElements = answersArray.map(option =>
+      (<Option
+        option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
+        id={nanoid()}
+        selected={false}
+      />)
       )
   //   // console.log(optionElements)
 
