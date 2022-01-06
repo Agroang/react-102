@@ -6,6 +6,8 @@ import Option from "./Option"
 export default function Questions() {
 
   const [questionsData, setQuestionsData] = React.useState({})
+  // state to handle new data
+  const [newQuiz, setNewQuiz] = React.useState({})
 
   // "working" but breaking from time to time
   // getting undefined first time, and only works after i comment out
@@ -28,7 +30,7 @@ export default function Questions() {
     }
   }
     fetchQuiz()
-  }, [])
+  }, [newQuiz])
   // make if data is empty dont run the map and just console log
   // console.log(questionsData)
   // maybe use componentdidmountmethod? o agregar errores con if
