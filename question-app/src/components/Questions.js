@@ -31,6 +31,8 @@ export default function Questions() {
   }, [])
   // make if data is empty dont run the map and just console log
   // console.log(questionsData)
+  // maybe use componentdidmountmethod? o agregar errores con if
+  // https://reactjs.org/docs/faq-ajax.html
   const dataArray = questionsData.results
   //testing if fetch working
   // console.log(dataArray)
