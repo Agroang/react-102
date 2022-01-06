@@ -86,10 +86,6 @@ export default function Questions() {
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
-  // each option has an id now, will help with the selected option
-  // each option has a selected(to false) option now, need a function
-  // that toggles that, and a use effect that follows that?...not sure
-
   return (
       <div>
         {testingElements}
