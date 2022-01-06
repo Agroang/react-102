@@ -97,6 +97,7 @@ export default function Questions() {
       <div>
         {testingElements}
         {!dataArray && <h1>Loading...</h1>}
+        {/* not displayed :(  */}
         <div className="check-answers-button-container">
           <button>Check Answers</button>
         </div>
