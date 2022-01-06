@@ -68,7 +68,7 @@ export default function Questions() {
     shuffle(answersArray)
   //   // console.log(answersArray)
     const markdownTitle = item.question; removeMarkdown(markdownTitle);
-    const sanitizedTitle = markdownTitle.replaceAll('&quot;','"')
+    const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
   //   // &039; = ' , need to change for title and options!
   //  // &#039; = '
   //  // &amp; = & , need to change for title and options!
