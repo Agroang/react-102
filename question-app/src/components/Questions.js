@@ -16,19 +16,24 @@ export default function Questions() {
   // }, [])
 
   // copy of above for testing using async
-  // React.useEffect(() => {
-  //   async function fetchQuiz() {
-  //   const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
-  //   handleErrors(response)
-  //   const data = await response.json()
-  //   setQuestionsData(data)
-  // }
-  //   fetchQuiz()
-  // }, [])
-
+  React.useEffect(() => {
+    async function fetchQuiz() {
+    const response = await fetch(`https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple`)
+    const data = await response.json()
+    console.log(data)
+    setQuestionsData(data)
+    console.log(data)
+    if (data === {}) {
+      console.log("this aint working")
+    }
+  }
+    fetchQuiz()
+  }, [])
+  // make if data is empty dont run the map and just console log
+  // console.log(questionsData)
   const dataArray = questionsData.results
   //testing if fetch working
-  console.log(dataArray)
+  // console.log(dataArray)
 
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
