@@ -20,7 +20,5 @@ export default function Option(props) {
   )
 }
 
-// on click: add a class that changes background color (as selected, able to
-// toggle)
-// also on click, change the held to true, can I check that on the parent
-// or is it something I need to do here in the option alone?
+// should each optio bet a radio button? how to limit the amount of answers
+// that can be clicked at the same time? has to be a form with styled radio...
