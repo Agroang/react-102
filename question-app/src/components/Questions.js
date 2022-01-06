@@ -6,7 +6,7 @@ import Option from "./Option"
 export default function Questions() {
 
   const [questionsData, setQuestionsData] = React.useState([])
-  // state to handle new data
+  // state to handle new data, can change =medium to hard or something on url
   // const [newQuiz, setNewQuiz] = React.useState({})
 
   // "working" without async function, as backup
@@ -16,18 +16,18 @@ export default function Questions() {
   //     .then(res => res.json())
   //     .then(data => setQuestionsData(data))
   // }, [])
-
+  console.log("first console.log")
   // same as above but using async
   React.useEffect(() => {
     const url = 'https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple'
-
     const fetchData = async () => {
       try {
-        const response = await fetch(url);
-        const json = await response.json();
-        setQuestionsData(json);
+        const response = await fetch(url)
+        const data = await response.json()
+        console.log(`second console.log ${data}`)
+        setQuestionsData(data);
       } catch (error) {
-        console.log("error", error)
+        // console.log("error", error)
       }
     };
     fetchData();
@@ -35,7 +35,7 @@ export default function Questions() {
 
   const dataArray = questionsData.results
   //testing if fetch working
-  console.log(dataArray)
+  console.log(`third console.log ${dataArray}`)
 
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
@@ -54,31 +54,31 @@ export default function Questions() {
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
  // so far working one
-  const testingElements = dataArray.map(item => {
-    const answersArray = []
-    answersArray.push(item.correct_answer)
-    item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
-    shuffle(answersArray)
-    const markdownTitle = item.question; removeMarkdown(markdownTitle);
-    const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
-    const optionElements = answersArray.map(option =>
-      (<Option
-        option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
-        id={nanoid()}
-        selected={false}
-      />)
-      )
+  // const testingElements = dataArray.map(item => {
+  //   const answersArray = []
+  //   answersArray.push(item.correct_answer)
+  //   item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
+  //   shuffle(answersArray)
+  //   const markdownTitle = item.question; removeMarkdown(markdownTitle);
+  //   const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")
+  //   const optionElements = answersArray.map(option =>
+  //     (<Option
+  //       option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&")}
+  //       id={nanoid()}
+  //       selected={false}
+  //     />)
+  //     )
 
-    return (
-      <div className="questions-container">
-        <h1>{sanitizedTitle}</h1>
-        <div className="options-container">
-          {optionElements}
-        </div>
-        <hr />
-      </div>
-    )
-  })
+  //   return (
+  //     <div className="questions-container">
+  //       <h1>{sanitizedTitle}</h1>
+  //       <div className="options-container">
+  //         {optionElements}
+  //       </div>
+  //       <hr />
+  //     </div>
+  //   )
+  // })
 
   // the biggest div needs margin! or padding, something
   // each h2 (option) needs a click event, save some state, something
@@ -88,7 +88,7 @@ export default function Questions() {
 
   return (
       <div>
-        {testingElements}
+        {/* {testingElements} */}
         <div className="check-answers-button-container">
           <button>Check Answers</button>
         </div>

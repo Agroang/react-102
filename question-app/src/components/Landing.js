@@ -8,6 +8,7 @@ export default function Landing() {
     setDisplay((oldDisplay) => !oldDisplay)
   }
 
+
   return (
     <div>
       {!display &&
