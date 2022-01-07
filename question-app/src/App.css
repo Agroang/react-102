@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body {
   margin: 0;
@@ -10,6 +12,28 @@ body {
 .title-container {
   font-family: 'Monofett', cursive;
   font-size: 64px;
+  margin-bottom: 0px;
+}
+
+.description-container {
+  font-family: 'Special Elite', cursive;
+}
+
+.start-quiz-container {
+  width: 150px;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #7352C7;
+  box-shadow: 2px 2px 5px 0px #585656;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  text-shadow:2px 3px 5px #585656;
+}
+
+.start-quiz-container:hover {
+  cursor: pointer;
 }
 
 /* .questions-container {
@@ -21,7 +45,7 @@ body {
 } */
 
 .landing-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   margin: 5%;
   text-align: center;
   padding: 10px 40px;
@@ -61,7 +85,7 @@ body {
 
 .loading-button {
   position: absolute;
-  top: 20vh;
+  top: 40vh;
   left: 80vh;
   border: none;
   width: 300px;
@@ -70,6 +94,9 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
+  box-shadow: 2px 2px 5px 0px #585656;
+  border-radius: 8px;
+  background-color: #ffffff70;
 }
  /* -- start testing for dot-flashing -- */
 .dot-flashing {
