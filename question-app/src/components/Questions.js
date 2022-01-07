@@ -97,11 +97,10 @@ export default function Questions() {
   // "k&e" from "pokemon" breaks as well, need to change for an e with accent
   return (
       <div className="questions-container-test">
-        {/* esta haciendo display the testingElements sin que ponga nada!
-        el return es el problema? */}
         {testingElements}
-        {!dataArray && <h1>Loading...</h1>}
-        {/* not displayed :(  */}
+        {!dataArray &&
+        <button className="loading-button">Loading<span className="dot-flashing"></span></button>
+        }
         <div className="check-answers-button-container">
           <button>Check Answers</button>
         </div>
