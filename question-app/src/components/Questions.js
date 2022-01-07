@@ -102,6 +102,7 @@ export default function Questions() {
         <button className="loading-button"><div className="dot-flashing"></div></button>
         }
         <div className="check-answers-button-container">
+          {/* no button if testing elements is data is falsy */}
           <button>Check Answers</button>
         </div>
       </div>
