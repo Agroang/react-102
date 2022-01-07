@@ -48,8 +48,14 @@ body {
   border: 1px solid red;
 }
 
+.questions-container-test {
+  position: relative;
+}
 
 .loading-button {
+  position: absolute;
+  top: 20vh;
+  left: 80vh;
   border: none;
   width: 300px;
   height: 150px;
