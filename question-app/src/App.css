@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+
 body {
   margin: 0;
   background: url("./images/pixel_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.title-container {
+  font-family: 'Monofett', cursive;
+  font-size: 64px;
 }
 
 /* .questions-container {
