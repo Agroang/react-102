@@ -99,7 +99,7 @@ export default function Questions() {
       <div className="questions-container-test">
         {testingElements}
         {!dataArray &&
-        <button className="loading-button">Loading<span className="dot-flashing"></span></button>
+        <button className="loading-button"><div className="dot-flashing"></div></button>
         }
         <div className="check-answers-button-container">
           <button>Check Answers</button>
