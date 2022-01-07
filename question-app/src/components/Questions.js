@@ -94,7 +94,7 @@ export default function Questions() {
   // start actually trying to save selected and see if i need radio buttons
   // "k&e" from "pokemon" breaks as well, need to change for an e with accent
   return (
-      <div>
+      <div className="testing">
         {testingElements}
         {!dataArray && <h1>Loading...</h1>}
         {/* not displayed :(  */}
