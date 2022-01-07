@@ -81,7 +81,9 @@ export default function Questions() {
         </div>
       )
     })
-      return testingElements
+      // si elimino este return functiona, el button tambien aparece, comment out
+      // for the time being
+      // return testingElements
   }
 
   // the biggest div needs margin! or padding, something
@@ -97,7 +99,7 @@ export default function Questions() {
       <div className="questions-container-test">
         {/* esta haciendo display the testingElements sin que ponga nada!
         el return es el problema? */}
-        {/* {testingElements} */}
+        {testingElements}
         {!dataArray && <h1>Loading...</h1>}
         {/* not displayed :(  */}
         <div className="check-answers-button-container">
