@@ -60,6 +60,9 @@ body {
   border: 1px solid red;
   margin: 5%;
   padding: 10px 40px;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  text-shadow:5px 4px 5px #585656;
 }
 
 .options-container {
