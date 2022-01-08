@@ -86,16 +86,14 @@ export default function Questions() {
       // return testingElements
   }
 
-  // the biggest div needs margin! or padding, something
-  // each h2 (option) needs a click event, save some state, something
+  // each (option) needs a click event, save some state, something
   // like held on the dice game, on click change value to held (true)
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
-  // change loading to a big fat button or something
   // start actually trying to save selected and see if i need radio buttons
-  // "k&e" from "pokemon" breaks as well, need to change for an e with accent
-  // "k&eacute;mon" from "pokemon" need to change for an e with accent
+  // "k&e" from "pokemon" breaks as well, need to change for an é with accent
+  // "k&eacute;mon" from "pokemon" need to change for an é with accent
   // ö	 = &ouml; tambien lo encontre
   return (
       <div className="questions-container-test">
