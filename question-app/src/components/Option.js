@@ -9,7 +9,7 @@ export default function Option(props) {
     setSelected(oldSelected => !oldSelected)
   }
 
-  const selectedColor = selected ? "blue" : "white"
+  const selectedColor = selected ? "#38285fe8" : "#835ee0e8"
   const styles = {
     backgroundColor: selectedColor
   }

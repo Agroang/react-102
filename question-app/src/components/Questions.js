@@ -95,6 +95,7 @@ export default function Questions() {
   // change loading to a big fat button or something
   // start actually trying to save selected and see if i need radio buttons
   // "k&e" from "pokemon" breaks as well, need to change for an e with accent
+  // "k&eacute;mon" from "pokemon" need to change for an e with accent
   return (
       <div className="questions-container-test">
         {testingElements}
