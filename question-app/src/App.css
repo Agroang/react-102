@@ -60,13 +60,23 @@ body {
   border: 1px solid red;
   margin: 5%;
   padding: 10px 40px;
-  color: white;
+}
+
+.questions-container > h1 {
   font-family: 'Fredoka One', cursive;
   text-shadow:5px 4px 5px #585656;
+  color: white;
 }
 
 .options-container {
   display: flex;
+  align-content: space-between;
+  text-align: center;
+}
+
+.button-option-container {
+  margin: 0px 20px;
+  width: 100%;
 }
 
 .check-answers-button-container {
@@ -76,10 +86,6 @@ body {
 
 .check-answers-button-container > button {
   font-size: 30px;
-}
-
-.button-option-container {
-  border: 1px solid red;
 }
 
 .questions-container-test {

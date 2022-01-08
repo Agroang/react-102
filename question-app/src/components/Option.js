@@ -14,9 +14,9 @@ export default function Option(props) {
     backgroundColor: selectedColor
   }
   return(
-    <button className="button-option-container" onClick={handleClick} style={styles}>
+    <div className="button-option-container" onClick={handleClick} style={styles}>
       {markdown}
-    </button>
+    </div>
   )
 }
 
