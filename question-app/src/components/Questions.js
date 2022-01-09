@@ -92,9 +92,7 @@ export default function Questions() {
   // check the dice example for an idea
 
   // start actually trying to save selected and see if i need radio buttons
-  // "k&e" from "pokemon" breaks as well, need to change for an é with accent
-  // "k&eacute;mon" from "pokemon" need to change for an é with accent
-  // ö	 = &ouml; tambien lo encontre
+
   return (
       <div className="questions-container-test">
         {testingElements}
