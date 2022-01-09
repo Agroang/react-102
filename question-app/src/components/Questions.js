@@ -57,6 +57,10 @@ export default function Questions() {
   let testingElements
   if (dataArray !== undefined) {
     testingElements = dataArray.map(item => {
+      // should answersArray be a state? should I keep the correct answer in
+      // another state or somewhere? how to compare the selected option with the
+      // correct answer? (selected option.option === correct answer?)
+      // I should also pass the correct answer as prop then to each option?
       const answersArray = []
       answersArray.push(item.correct_answer)
       item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
