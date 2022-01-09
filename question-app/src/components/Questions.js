@@ -62,10 +62,10 @@ export default function Questions() {
       item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
       shuffle(answersArray)
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
-      const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "é").replaceAll("k&eacute;", "é").replaceAll("&ouml;", "ö")
+      const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
       const optionElements = answersArray.map(option =>
         (<Option
-        option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "é").replaceAll("k&eacute;", "é").replaceAll("&ouml;", "ö")}
+        option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
           id={nanoid()}
           selected={false}
         />)
