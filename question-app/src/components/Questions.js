@@ -92,6 +92,8 @@ export default function Questions() {
   // check the dice example for an idea
 
   // start actually trying to save selected and see if i need radio buttons
+  // have the main container for questions with a greysh background color?
+  // a little bit hard to read
 
   return (
       <div className="questions-container-test">

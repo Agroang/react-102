@@ -106,6 +106,14 @@ hr {
   font-family: 'Fredoka One', cursive;
   margin-bottom: 30px;
   padding: 8px 16px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  box-shadow: 2px 2px 5px 0px #1c1c1c3b;
+}
+
+.check-answers-button-container > button:hover {
+  cursor: pointer;
 }
 
 .questions-container-test {
