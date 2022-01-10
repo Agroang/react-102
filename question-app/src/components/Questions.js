@@ -78,24 +78,24 @@ export default function Questions() {
         )
 
       return (
-        // and this contantainer the form
-        <form className="questions-container">
-          {/* no need of fieldset nor legend I think */}
-          <h1>{sanitizedTitle}</h1>
-          {/* this should be a form and inside options have them as radio */}
-          <div className="options-container">
-            {optionElements}
-          </div>
-          <hr />
-        </form>
-        // working version bellow
-        // <div className="questions-container">
+        // and this contantainer the form // form version not functional atm
+        // <form className="questions-container">
+        //   {/* no need of fieldset nor legend I think */}
         //   <h1>{sanitizedTitle}</h1>
+        //   {/* this should be a form and inside options have them as radio */}
         //   <div className="options-container">
         //     {optionElements}
         //   </div>
         //   <hr />
-        // </div>
+        // </form>
+        // working version bellow
+        <div className="questions-container">
+          <h1>{sanitizedTitle}</h1>
+          <div className="options-container">
+            {optionElements}
+          </div>
+          <hr />
+        </div>
       )
     })
       // si elimino este return functiona, el button tambien aparece, comment out
@@ -108,7 +108,6 @@ export default function Questions() {
   // if held change color background, save in an array or something?
   // check the dice example for an idea
 
-  // start actually trying to save selected and see if i need radio buttons
   // have the main container for questions with a greysh background color?
   // I believe the target container should be questions-container-test
   // a little bit hard to read

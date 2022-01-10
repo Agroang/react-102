@@ -4,31 +4,48 @@ import removeMarkdown from "markdown-to-text";
 export default function Option(props) {
   const markdown = props.option;removeMarkdown(markdown);
   const [selected, setSelected] = React.useState(props.selected)
+  // state for the radio button, it needs the checked to be a controlled
+  // component and have only 1 button at the same time // not functional
+  // const [radioData, setRadioData] = React.useState({
+  //   value: ""
+  // })
 
   function handleClick() {
     setSelected(oldSelected => !oldSelected)
   }
+
+  // for radio button //not functional
+  //   function handleChange(event) {
+  //   const { name, value, type, checked } = event.target
+  //     setRadioData(prevRadioData => {
+  //     return { // we don't add a new one as we use value
+  //       ...prevRadioData,
+  //       [name]: type === "checkbox" ? checked : value
+  //     }
+  //   })
+  // }
 
   const selectedColor = selected ? "#38285fe8" : "#835ee0e8"
   const styles = {
     backgroundColor: selectedColor
   }
   return(
-    <div className="button-option-container" onClick={handleClick} style={styles}>
-      <input
-        type="radio"
-        name={markdown}
-        value={markdown}
-        //need something for the controlled component
-        //need on click event
-        //to have only 1 option it needs the checked
-      />
-      <label htmlFor={markdown}>{markdown}</label>
-    </div>
-    // working version bellow
-    //  <div className="button-option-container" onClick={handleClick} style={styles}>
-    //   {markdown}
+    // radio button version, not functional atm
+    // <div className="button-option-container" onClick={handleClick} style={styles}>
+    //   <input
+    //     type="radio"
+    //     name={markdown}
+    //     value={markdown}
+    //     checked={radioData.value === markdown }
+    //     onChange={handleChange}
+
+    //   />
+    //   <label htmlFor={markdown}>{markdown}</label>
     // </div>
+    // working version bellow
+     <div className="button-option-container" onClick={handleClick} style={styles}>
+      {markdown}
+    </div>
   )
 }
 
