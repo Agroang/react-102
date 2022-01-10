@@ -78,6 +78,8 @@ export default function Questions() {
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
+          {/* this should be a form and inside options have them as radio */}
+          {/* fieldset and form have to be outside of the options... */}
           <div className="options-container">
             {optionElements}
           </div>
