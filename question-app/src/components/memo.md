@@ -1,5 +1,5 @@
 // Radio buttons are also a little bit tricky in React. As previously mentioned
-// we want to controll everything from the React side so we need to have a
+// we want to control everything from the React side so we need to have a
 // controlled component, in some cases before we were just using the value but
 // in radio buttons we need to do a little bit more.
 

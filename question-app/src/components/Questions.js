@@ -8,6 +8,7 @@ export default function Questions() {
   const [questionsData, setQuestionsData] = React.useState([])
   // state to handle new data, can change =medium to hard or something on url
   // const [newQuiz, setNewQuiz] = React.useState({})
+  // I will need a new state that handles the options, in the memo is the formData
 
   // "working" without async function, as backup
   // getting undefined first time, and only works after i comment out
