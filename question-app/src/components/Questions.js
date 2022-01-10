@@ -123,6 +123,9 @@ export default function Questions() {
         <button className="loading-button"><div className="dot-flashing"></div></button>
         }
         <div className="check-answers-button-container">
+        {/* should all the correct answers be on a special state? how to read if the
+        option is the correct answer? each option knows if they are the correct
+        but how to compare with the click over here? */}
         {dataArray && <button>Check Answers</button>}
         </div>
       </div>
