@@ -15,8 +15,20 @@ export default function Option(props) {
   }
   return(
     <div className="button-option-container" onClick={handleClick} style={styles}>
-      {markdown}
+      <input
+        type="radio"
+        name={markdown}
+        value={markdown}
+        //need something for the controlled component
+        //need on click event
+        //to have only 1 option it needs the checked
+      />
+      <label htmlFor={markdown}>{markdown}</label>
     </div>
+    // working version bellow
+    //  <div className="button-option-container" onClick={handleClick} style={styles}>
+    //   {markdown}
+    // </div>
   )
 }
 

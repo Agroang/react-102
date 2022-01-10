@@ -9,6 +9,7 @@ export default function Questions() {
   // state to handle new data, can change =medium to hard or something on url
   // const [newQuiz, setNewQuiz] = React.useState({})
   // I will need a new state that handles the options, in the memo is the formData
+  // it might have to be on the option itself
 
   // "working" without async function, as backup
   // getting undefined first time, and only works after i comment out
@@ -78,15 +79,23 @@ export default function Questions() {
 
       return (
         // and this contantainer the form
-        <div className="questions-container">
-          {/* the h1 bellow should be the fieldset I believe */}
+        <form className="questions-container">
+          {/* no need of fieldset nor legend I think */}
           <h1>{sanitizedTitle}</h1>
           {/* this should be a form and inside options have them as radio */}
           <div className="options-container">
             {optionElements}
           </div>
           <hr />
-        </div>
+        </form>
+        // working version bellow
+        // <div className="questions-container">
+        //   <h1>{sanitizedTitle}</h1>
+        //   <div className="options-container">
+        //     {optionElements}
+        //   </div>
+        //   <hr />
+        // </div>
       )
     })
       // si elimino este return functiona, el button tambien aparece, comment out
