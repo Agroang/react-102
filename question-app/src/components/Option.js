@@ -12,6 +12,8 @@ export default function Option(props) {
 
   function handleClick() {
     setSelected(oldSelected => !oldSelected)
+    // this is working, props.correctAnswer does represent the correct answer
+    console.log(props.correctAnswer)
   }
 
   // for radio button //not functional

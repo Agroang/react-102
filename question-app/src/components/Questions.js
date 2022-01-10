@@ -18,7 +18,7 @@ export default function Questions() {
   //     .then(res => res.json())
   //     .then(data => setQuestionsData(data))
   // }, [])
-  console.log("first console.log")
+  // console.log("first console.log")
   // same as above but using async
   React.useEffect(() => {
     const url = 'https://opentdb.com/api.php?amount=5&category=15&difficulty=medium&type=multiple'
@@ -26,7 +26,7 @@ export default function Questions() {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        console.log(`second console.log ${data}`)
+        // console.log(`second console.log ${data}`)
         setQuestionsData(data);
       } catch (error) {
         // console.log("error", error)
@@ -37,7 +37,7 @@ export default function Questions() {
 
   const dataArray = questionsData.results
   //testing if fetch working
-  console.log(`third console.log ${dataArray}`)
+  // console.log(`third console.log ${dataArray}`)
 
   // need to fetch, useEffect to avoid a lot of fetches, so just 1 time ,[]
   // but also need to remake if they want to play again with a different set
@@ -74,6 +74,7 @@ export default function Questions() {
         option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
           id={nanoid()}
           selected={false}
+          correctAnswer={item.correct_answer}
         />)
         )
 
@@ -112,6 +113,9 @@ export default function Questions() {
   // I believe the target container should be questions-container-test
   // a little bit hard to read
 
+
+  // tenzies completed, get an idea here
+  // https://scrimba.com/learn/learnreact/tenzies-new-game-co5fd4991acd2a6ded9358bb4
   return (
       <div className="questions-container-test">
         {testingElements}
