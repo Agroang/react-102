@@ -6,6 +6,7 @@ import Option from "./Option"
 export default function Questions() {
 
   const [questionsData, setQuestionsData] = React.useState([])
+  // const [correctArray, setCorrectArray] = React.useState([])
   // state to handle new data, can change =medium to hard or something on url
   // const [newQuiz, setNewQuiz] = React.useState({})
   // I will need a new state that handles the options, in the memo is the formData
@@ -55,7 +56,6 @@ export default function Questions() {
   let correctAnswersOnly = []
   // for testing output
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
-
  // so far working one
   let testingElements
   if (dataArray !== undefined) {
@@ -108,7 +108,8 @@ export default function Questions() {
       // si elimino este return functiona, el button tambien aparece, comment out
       // for the time being
       // return testingElements
-  }
+    }
+
 
   // each (option) needs a click event, save some state, something
   // like held on the dice game, on click change value to held (true)
@@ -125,6 +126,21 @@ export default function Questions() {
   // make this a state, pass the setstate ? ...how to confirm?
   // i need to pass the value back, and compare that to the correctanswers
   // the value meaning the title, the "option" && if its held
+
+  // currently the bellow is not working, how to compare the Option info
+  // with the one here?
+  // checkanswers on click re render the options with all the info plus info?
+  //   React.useEffect(() => {
+  //     if (correctAnswersOnly.length === 5) {
+  //       setCorrectArray(correctAnswersOnly)
+  //     }
+  //   }, [])
+
+  // console.log(correctArray)
+  //this holds the correct answers
+  // pass the correct answers from the beginning, on click does something
+  // on each child? runs a function that goes to the child?
+  // that compares the props.option with props.correct answers??
   console.log(correctAnswersOnly)
 
   return (
