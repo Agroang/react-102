@@ -52,6 +52,7 @@ export default function Questions() {
     return a;
   }
 
+  let correctAnswersOnly = []
   // for testing output
   // dataArray.map(question => (question.incorrect_answers.map(incorrect => { return console.log(incorrect)})))
 
@@ -65,19 +66,21 @@ export default function Questions() {
       // I should also pass the correct answer as prop then to each option?
       const answersArray = []
       answersArray.push(item.correct_answer)
+      correctAnswersOnly.push(item.correct_answer)
       item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
       shuffle(answersArray)
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
       const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
       const optionElements = answersArray.map(option =>
-        (<Option
+        (
+        <Option
           option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
-          id={nanoid()}
+          key={nanoid()}
           selected={false}
           correctAnswer={item.correct_answer}
           // for some reason the key is not working, not appearing on the props
           // consolelog so you would think its working...
-          key={nanoid()}
+          id={nanoid()}
         />)
         )
 
@@ -119,6 +122,11 @@ export default function Questions() {
 
   // tenzies completed, get an idea here
   // https://scrimba.com/learn/learnreact/tenzies-new-game-co5fd4991acd2a6ded9358bb4
+  // make this a state, pass the setstate ? ...how to confirm?
+  // i need to pass the value back, and compare that to the correctanswers
+  // the value meaning the title, the "option" && if its held
+  console.log(correctAnswersOnly)
+
   return (
       <div className="questions-container-test">
         {testingElements}
