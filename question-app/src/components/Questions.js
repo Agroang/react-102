@@ -141,6 +141,7 @@ export default function Questions() {
   // pass the correct answers from the beginning, on click does something
   // on each child? runs a function that goes to the child?
   // that compares the props.option with props.correct answers??
+  // the bellow starts on the first run empty, careful with that!
   console.log(correctAnswersOnly)
 
   return (
