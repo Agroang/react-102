@@ -142,6 +142,7 @@ export default function Questions() {
   // on each child? runs a function that goes to the child?
   // that compares the props.option with props.correct answers??
   // the bellow starts on the first run empty, careful with that!
+  // https://stackoverflow.com/questions/38394015/how-to-pass-data-from-child-component-to-its-parent-in-reactjs
   console.log(correctAnswersOnly)
 
   return (
