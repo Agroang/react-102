@@ -70,7 +70,7 @@ export default function QuestionsTest() {
     // return testingElements
   }
 
-
+  // testing useRef
   const onClickFunction = () => {
     myRef.current?.childFunction();
   }
