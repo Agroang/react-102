@@ -71,6 +71,8 @@ export default function QuestionsTest() {
   }
 
   // testing useRef
+  // need to map somewhere?
+  // https://stackoverflow.com/questions/63907433/how-to-call-multiple-instances-of-the-same-child-components-function-from-paren
   const onClickFunction = () => {
     myRef.current?.childFunction();
   }
