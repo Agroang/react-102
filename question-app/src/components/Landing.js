@@ -1,5 +1,6 @@
 import React from "react"
-import Questions from "./Questions"
+// import Questions from "./Questions"
+import QuestionsTest from "./QuestionsTest"
 
 export default function Landing() {
   const [display, setDisplay] = React.useState(false)
@@ -18,7 +19,7 @@ export default function Landing() {
           <button className="start-quiz-container" onClick={toggle}>Start Quiz</button>
         </div>
       }
-      {display && <Questions />}
+      {display && <QuestionsTest />}
     </div>
   )
 }
