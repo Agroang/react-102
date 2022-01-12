@@ -1,7 +1,12 @@
 import React from "react"
 import removeMarkdown from "markdown-to-text";
 
-export default function Option(props) {
+
+// React.forwardRef((props, ref)
+// const FancyButton = React.forwardRef((props, ref) => (
+export const Option = React.forwardRef((props, ref) => {
+  //working one, deleted at the end one } and added a )
+// export default function Option(props) {
   const option = props.option;removeMarkdown(option);
   const [selected, setSelected] = React.useState(props.selected)
 
@@ -9,9 +14,15 @@ export default function Option(props) {
     setSelected(oldSelected => !oldSelected)
   }
 
+  // test function
   function childFunction () {
     console.log("function from the option component")
   }
+
+  // also part of the test
+  React.useImperativeHandle(ref, () => ({
+    childFunction
+  }));
 
   const selectedColor = selected ? "#38285fe8" : "#835ee0e8"
   const styles = {
@@ -22,4 +33,4 @@ export default function Option(props) {
       {option}
     </div>
   )
-}
+})

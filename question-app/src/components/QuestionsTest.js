@@ -1,9 +1,12 @@
 import React from "react"
 import removeMarkdown from "markdown-to-text"
 import { nanoid } from 'nanoid'
-import Option from "./Option"
+// no longer default import for testing purposes
+import { Option } from "./Option"
 
 export default function QuestionsTest() {
+  // testing useref
+  const myRef = React.useRef();
 
   const [questionsData, setQuestionsData] = React.useState([])
   const [dataArray, setDataArray] = React.useState([])
@@ -49,6 +52,8 @@ export default function QuestionsTest() {
           option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
           selected={false}
           correctAnswer={item.correct_answer}
+          // testing
+          ref={myRef}
         />)
       )
 
@@ -66,15 +71,20 @@ export default function QuestionsTest() {
   }
 
 
+  const onClickFunction = () => {
+    myRef.current?.childFunction();
+  }
 
-  function checkAnswers() {
+
+  // function checkAnswers() {
     // how to trigger on the child? on option?
     // click on die runs props.holddice which is on the parent
     // a little bit different...the other way around
     // maybe a useeffect? that depends on a state, maybe it
     // changes a state to true, if true..... re renders the option
     // but that would need me to change the data again...
-  }
+
+  // }
 
   // pass the correct answers from the beginning, on click does something
   // on each child? runs a function that goes to the child?
@@ -89,7 +99,7 @@ export default function QuestionsTest() {
         <button className="loading-button"><div className="dot-flashing"></div></button>
       }
       <div className="check-answers-button-container">
-        {dataArray && <button>Check Answers</button>}
+        {dataArray && <button onClick={onClickFunction}>Check Answers</button>}
       </div>
     </div>
 
