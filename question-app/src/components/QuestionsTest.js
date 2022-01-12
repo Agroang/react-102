@@ -54,6 +54,7 @@ export default function QuestionsTest() {
           correctAnswer={item.correct_answer}
           // testing
           ref={myRef}
+          // technically passing myref here but need something else!?
         />)
       )
 
@@ -72,7 +73,10 @@ export default function QuestionsTest() {
 
   // testing useRef
   // need to map somewhere?
+  // only checking the last component?! how to fix this
   // https://stackoverflow.com/questions/63907433/how-to-call-multiple-instances-of-the-same-child-components-function-from-paren
+  // https://reactjs.org/docs/hooks-reference.html#useref
+  // useImperativeHandle function multiple child components on google
   const onClickFunction = () => {
     myRef.current?.childFunction();
   }
