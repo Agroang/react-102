@@ -18,7 +18,7 @@ export default function QuestionsTest() {
     setDataArray(questionsData.results)
   }, [questionsData])
 
-  console.log(dataArray)
+  // console.log(dataArray)
 
   function shuffle(a) {
     for (let i = a.length - 1; i > 0; i--) {
@@ -38,16 +38,17 @@ export default function QuestionsTest() {
       correctAnswersOnly.push(item.correct_answer)
       item.incorrect_answers.forEach(incorrectAnswer => { answersArray.push(incorrectAnswer) })
       shuffle(answersArray)
+      // could update the value of an array 5 times through this loop, not sure
+      // if i need that array tho
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
       const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
       const optionElements = answersArray.map(option =>
       (
         <Option
-          option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
           key={nanoid()}
+          option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
           selected={false}
           correctAnswer={item.correct_answer}
-          id={nanoid()}
         />)
       )
 
@@ -62,6 +63,10 @@ export default function QuestionsTest() {
       )
     })
     // return testingElements
+  }
+
+  function checkAnswers() {
+    // how to trigger on the child? on option?
   }
 
   // pass the correct answers from the beginning, on click does something
