@@ -16,7 +16,7 @@ export const Option = React.forwardRef((props, ref) => {
 
   // test function
   function childFunction () {
-    console.log("function from the option component")
+    selected && console.log(`selected and option is ${option}`)
   }
 
   // also part of the test
