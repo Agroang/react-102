@@ -65,8 +65,15 @@ export default function QuestionsTest() {
     // return testingElements
   }
 
+
+
   function checkAnswers() {
     // how to trigger on the child? on option?
+    // click on die runs props.holddice which is on the parent
+    // a little bit different...the other way around
+    // maybe a useeffect? that depends on a state, maybe it
+    // changes a state to true, if true..... re renders the option
+    // but that would need me to change the data again...
   }
 
   // pass the correct answers from the beginning, on click does something

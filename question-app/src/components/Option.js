@@ -9,6 +9,10 @@ export default function Option(props) {
     setSelected(oldSelected => !oldSelected)
   }
 
+  function childFunction () {
+    console.log("function from the option component")
+  }
+
   const selectedColor = selected ? "#38285fe8" : "#835ee0e8"
   const styles = {
     backgroundColor: selectedColor
