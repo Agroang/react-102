@@ -33,6 +33,9 @@ export default function QuestionsTest() {
 
   let correctAnswersOnly = []
 
+  // for testing (trying to make a big array of options)
+  let testingBigArray = []
+
   let testingElements
   if (dataArray !== undefined) {
     testingElements = dataArray.map(item => {
@@ -45,25 +48,45 @@ export default function QuestionsTest() {
       // if i need that array tho
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
       const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
+      // working one
+      // const optionElements = answersArray.map(option =>
+      // (
+      //   <Option
+      //     key={nanoid()}
+      //     option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
+      //     selected={false}
+      //     correctAnswer={item.correct_answer}
+      //     // testing
+      //     ref={myRef}
+      //     // technically passing myref here but need something else!?
+      //   />)
+      // )
       //
-      const optionElements = answersArray.map(option =>
-      (
-        <Option
-          key={nanoid()}
-          option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
-          selected={false}
-          correctAnswer={item.correct_answer}
+      // above's copy for testing, trying to pull out of this map
+      answersArray.map(option => {
+        testingBigArray.push(
+        {
+          key: nanoid(),
+          option: option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö"),
+          selected: false,
+          correctAnswer: item.correct_answer
           // testing
-          ref={myRef}
-          // technically passing myref here but need something else!?
-        />)
-      )
+          // ref={myRef}
+        // technically passing myref here but need something else!?
+        })
+        return testingBigArray
+      })
       //
+      // no titles here!? should I make option + title 1 component? how to
+      // identify the options with it's title? depends on the place I render it
+      // I guess? if it's the same order it kinda works... I believe
+      console.log(sanitizedTitle)
+      console.log(testingBigArray)
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
           <div className="options-container">
-            {optionElements}
+            {/* {optionElements} */}
           </div>
           <hr />
         </div>
@@ -102,7 +125,7 @@ export default function QuestionsTest() {
 
   return (
     <div className="questions-container-test">
-      {testingElements}
+      {/* {testingElements} */}
       {!dataArray &&
         <button className="loading-button"><div className="dot-flashing"></div></button>
       }
