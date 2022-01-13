@@ -136,3 +136,8 @@ export default function QuestionsTest() {
 
   )
 }
+
+// https://stackoverflow.com/questions/63907433/how-to-call-multiple-instances-of-the-same-child-components-function-from-paren
+// https://reactjs.org/docs/hooks-reference.html#useref
+// https://stackoverflow.com/questions/68960584/useimperativehandle-usage-for-children-componenent-but-cannot-get-function-from
+// https://dev.to/anikcreative/react-hooks-explained-useimperativehandle-5g44
