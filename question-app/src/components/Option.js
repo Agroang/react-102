@@ -22,6 +22,7 @@ export const Option = React.forwardRef((props, ref) => {
   // also part of the test
   React.useImperativeHandle(ref, () => ({
     childFunction: () => {
+      // what if instead of console.log set the state of something
       selected && console.log(`selected and option is ${option}`)
     }
   }));

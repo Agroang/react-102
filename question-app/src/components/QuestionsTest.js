@@ -45,6 +45,7 @@ export default function QuestionsTest() {
       // if i need that array tho
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
       const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
+      //
       const optionElements = answersArray.map(option =>
       (
         <Option
@@ -57,7 +58,7 @@ export default function QuestionsTest() {
           // technically passing myref here but need something else!?
         />)
       )
-
+      //
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
@@ -77,6 +78,7 @@ export default function QuestionsTest() {
   // https://stackoverflow.com/questions/63907433/how-to-call-multiple-instances-of-the-same-child-components-function-from-paren
   // https://reactjs.org/docs/hooks-reference.html#useref
   // useImperativeHandle function multiple child components on google
+
   const onClickFunction = () => {
     myRef.current?.childFunction();
   }
