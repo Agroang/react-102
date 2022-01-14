@@ -6,7 +6,7 @@ import { Option } from "./Option"
 
 export default function QuestionsTest() {
   // testing useref
-  const myRef = React.useRef();
+  // const myRef = React.useRef();
 
   const [questionsData, setQuestionsData] = React.useState([])
   const [dataArray, setDataArray] = React.useState([])
@@ -30,6 +30,7 @@ export default function QuestionsTest() {
     }
     return a;
   }
+
 
   let correctAnswersOnly = []
 
@@ -92,12 +93,28 @@ export default function QuestionsTest() {
       // will be those components
       // console.log(testingBigArray)
 
+      // more testing
+      // React.useEffect(() => {
+      //   setChildRefs([...Array(children).keys()].map(e => React.createRef()))
+      // }, [])
 
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
           <div className="options-container">
+            {/* working one */}
             {/* {optionElements} */}
+            {/* test one */}
+            {
+              testingBigArray.map(e =>
+              <Option
+                key={e.key}
+                option={e.option}
+                selected={e.selected}
+                correctAnswer={e.correctAnswer}
+                ref={React.createRef()}
+              />)
+            }
           </div>
           <hr />
         </div>
@@ -113,9 +130,14 @@ export default function QuestionsTest() {
   // https://reactjs.org/docs/hooks-reference.html#useref
   // useImperativeHandle function multiple child components on google
 
-  const onClickFunction = () => {
-    myRef.current?.childFunction();
-  }
+  // testing handler click
+  const handleClick = () => testingBigArray.forEach(c => c.current.childFunction())
+
+
+   // "working" one
+  // const onClickFunction = () => {
+  //   myRef.current?.childFunction();
+  // }
 
 
   // function checkAnswers() {
@@ -141,7 +163,8 @@ export default function QuestionsTest() {
         <button className="loading-button"><div className="dot-flashing"></div></button>
       }
       <div className="check-answers-button-container">
-        {dataArray && <button onClick={onClickFunction}>Check Answers</button>}
+        {/* made it a callback, working is declared above */}
+        {dataArray && <button onClick={() => handleClick}>Check Answers</button>}
       </div>
     </div>
 
