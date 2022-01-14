@@ -6,7 +6,7 @@ import { Option } from "./Option"
 
 export default function QuestionsTest() {
   // testing useref
-  // const myRef = React.useRef();
+  const myRef = React.useRef();
 
   const [questionsData, setQuestionsData] = React.useState([])
   const [dataArray, setDataArray] = React.useState([])
@@ -35,7 +35,7 @@ export default function QuestionsTest() {
   let correctAnswersOnly = []
 
   // for testing (trying to make a big array of options)
-  let testingBigArray = []
+  // let testingBigArray = []
 
   let testingElements
   if (dataArray !== undefined) {
@@ -50,36 +50,36 @@ export default function QuestionsTest() {
       const markdownTitle = item.question; removeMarkdown(markdownTitle);
       const sanitizedTitle = markdownTitle.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")
       // working one
-      // const optionElements = answersArray.map(option =>
-      // (
-      //   <Option
-      //     key={nanoid()}
-      //     option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
-      //     selected={false}
-      //     correctAnswer={item.correct_answer}
-      //     // testing
-      //     ref={myRef}
-      //     // technically passing myref here but need something else!?
-      //   />)
-      // )
+      const optionElements = answersArray.map(option =>
+      (
+        <Option
+          key={nanoid()}
+          option={option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö")}
+          selected={false}
+          correctAnswer={item.correct_answer}
+          // testing
+          ref={myRef}
+          // technically passing myref here but need something else!?
+        />)
+      )
       //
 
       // above's copy for testing, trying to pull out of this map
-      answersArray.map(option => {
-        testingBigArray.push(
-        {
-          key: nanoid(),
-          option: option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö"),
-          selected: false,
-          correctAnswer: item.correct_answer
+      // answersArray.map(option => {
+      //   testingBigArray.push(
+      //   {
+      //     key: nanoid(),
+      //     option: option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö"),
+      //     selected: false,
+      //     correctAnswer: item.correct_answer
 
-          // testing
-          // ref={myRef}
-        // technically passing myref here but need something else!?
+      //     // testing
+      //     // ref={myRef}
+      //   // technically passing myref here but need something else!?
 
-        })
-        return testingBigArray
-      })
+        // })
+      //   return testingBigArray
+      // })
       //
       // no titles here!? should I make option + title 1 component? how to
       // identify the options with it's title? depends on the place I render it
@@ -98,23 +98,25 @@ export default function QuestionsTest() {
       //   setChildRefs([...Array(children).keys()].map(e => React.createRef()))
       // }, [])
 
+      // more testing
+      // const optionElements = testingBigArray.map(e =>
+      //   (
+      //   <Option
+      //       key={e.key}
+      //       option={e.option}
+      //       selected={e.selected}
+      //       correctAnswer={e.correctAnswer}
+      //       ref={React.createRef()}
+      //     />)
+      //   )
+
+
+
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
           <div className="options-container">
-            {/* working one */}
-            {/* {optionElements} */}
-            {/* test one */}
-            {
-              testingBigArray.map(e =>
-              <Option
-                key={e.key}
-                option={e.option}
-                selected={e.selected}
-                correctAnswer={e.correctAnswer}
-                ref={React.createRef()}
-              />)
-            }
+            {optionElements}
           </div>
           <hr />
         </div>
@@ -131,13 +133,13 @@ export default function QuestionsTest() {
   // useImperativeHandle function multiple child components on google
 
   // testing handler click
-  const handleClick = () => testingBigArray.forEach(c => c.current.childFunction())
+  // const handleClick = () => testingBigArray.forEach(c => c.current.childFunction())
 
 
    // "working" one
-  // const onClickFunction = () => {
-  //   myRef.current?.childFunction();
-  // }
+  const onClickFunction = () => {
+    myRef.current?.childFunction();
+  }
 
 
   // function checkAnswers() {
@@ -158,13 +160,12 @@ export default function QuestionsTest() {
 
   return (
     <div className="questions-container-test">
-      {/* {testingElements} */}
+      {testingElements}
       {!dataArray &&
         <button className="loading-button"><div className="dot-flashing"></div></button>
       }
       <div className="check-answers-button-container">
-        {/* made it a callback, working is declared above */}
-        {dataArray && <button onClick={() => handleClick}>Check Answers</button>}
+        {dataArray && <button onClick={onClickFunction}>Check Answers</button>}
       </div>
     </div>
 
@@ -175,7 +176,3 @@ export default function QuestionsTest() {
 // https://reactjs.org/docs/hooks-reference.html#useref
 // https://stackoverflow.com/questions/68960584/useimperativehandle-usage-for-children-componenent-but-cannot-get-function-from
 // https://dev.to/anikcreative/react-hooks-explained-useimperativehandle-5g44
-
-// test
-
-// QuestionsTest = React.forwardRef(QuestionsTest);
