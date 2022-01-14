@@ -62,6 +62,7 @@ export default function QuestionsTest() {
       //   />)
       // )
       //
+
       // above's copy for testing, trying to pull out of this map
       answersArray.map(option => {
         testingBigArray.push(
@@ -70,9 +71,11 @@ export default function QuestionsTest() {
           option: option.replaceAll('&quot;', '"').replaceAll('&039;', "'").replaceAll('&#039;', "'").replaceAll("&amp;", "&").replaceAll("k&e;", "ké").replaceAll("k&eacute;", "ké").replaceAll("&ouml;", "ö"),
           selected: false,
           correctAnswer: item.correct_answer
+
           // testing
           // ref={myRef}
         // technically passing myref here but need something else!?
+
         })
         return testingBigArray
       })
@@ -80,13 +83,16 @@ export default function QuestionsTest() {
       // no titles here!? should I make option + title 1 component? how to
       // identify the options with it's title? depends on the place I render it
       // I guess? if it's the same order it kinda works... I believe
-      console.log(sanitizedTitle)
+      // console.log(sanitizedTitle)
+
       // testingbigarray is an array with 20 objects
       // each object is an option with its id, option, selected, so you have
       // in total 5 questions with 4 options each = 20 objects
       // loop over the array and create the components, make a variable that
       // will be those components
-      console.log(testingBigArray)
+      // console.log(testingBigArray)
+
+
       return (
         <div className="questions-container">
           <h1>{sanitizedTitle}</h1>
@@ -146,3 +152,7 @@ export default function QuestionsTest() {
 // https://reactjs.org/docs/hooks-reference.html#useref
 // https://stackoverflow.com/questions/68960584/useimperativehandle-usage-for-children-componenent-but-cannot-get-function-from
 // https://dev.to/anikcreative/react-hooks-explained-useimperativehandle-5g44
+
+// test
+
+// QuestionsTest = React.forwardRef(QuestionsTest);

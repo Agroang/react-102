@@ -15,16 +15,17 @@ export const Option = React.forwardRef((props, ref) => {
   }
 
   // test function
-  // function childFunction () {
-  //   selected && console.log(`selected and option is ${option}`)
-  // }
+  function childFunction () {
+    selected && console.log(`selected and option is ${option}`)
+  }
 
   // also part of the test
   React.useImperativeHandle(ref, () => ({
-    childFunction: () => {
-      // what if instead of console.log set the state of something
-      selected && console.log(`selected and option is ${option}`)
-    }
+    childFunction
+    // // : () => {
+    //   // what if instead of console.log set the state of something
+    //   selected && console.log(`selected and option is ${option}`)
+    // }
   }));
 
   const selectedColor = selected ? "#38285fe8" : "#835ee0e8"
