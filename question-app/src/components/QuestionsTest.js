@@ -81,6 +81,11 @@ export default function QuestionsTest() {
       // identify the options with it's title? depends on the place I render it
       // I guess? if it's the same order it kinda works... I believe
       console.log(sanitizedTitle)
+      // testingbigarray is an array with 20 objects
+      // each object is an option with its id, option, selected, so you have
+      // in total 5 questions with 4 options each = 20 objects
+      // loop over the array and create the components, make a variable that
+      // will be those components
       console.log(testingBigArray)
       return (
         <div className="questions-container">
