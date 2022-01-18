@@ -63,3 +63,34 @@ mycar.show();
 // constructor method and gets access to the parent's properties and methods.
 
 // ES6 Arrow Functions ---------------------------------------------------------
+
+// Arrow functions allow us to write shorter function syntax.
+
+// Before:
+
+hello = function () {
+  return "Hello World!";
+}
+
+// After (Arrow Function):
+
+hello = () => {
+  return "Hello World!";
+}
+
+// It gets shorter! If the function has *ONLY* one statement, and the statement
+// returns a value, you can remove the brackets and the return keyword:
+
+// Arrow Functions Return Value by Default:
+hello = () => "Hello World!";
+
+// Arrow Function With Parameters:
+hello = (val) => "Hello " + val;
+
+// In fact, if you have only one parameter, you can skip the parentheses as well
+
+// Arrow Function Without Parentheses:
+hello = val => "Hello " + val;
+
+// https://www.w3schools.com/REACT/react_es6_arrow.asp
+// What About "this"?
