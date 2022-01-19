@@ -170,5 +170,19 @@ document.getElementById("btn").addEventListener("click", myheader.changeColor);
 // available inside of that loop.
 // let has a block scope.
 
-// https://www.w3schools.com/REACT/react_es6_variables.asp
-// next is const
+// ES6 "const":
+// const is a variable that once it has been created, its value can never change
+// const has a block scope
+
+// The keyword const is a bit misleading.
+// It does not define a constant value.It defines a constant reference to a
+// value.
+
+// Because of this you can NOT:
+// Reassign a constant value
+// Reassign a constant array
+// Reassign a constant object
+
+// But you CAN:
+// Change the elements of constant array
+// Change the properties of constant object
