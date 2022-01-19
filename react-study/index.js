@@ -92,5 +92,62 @@ hello = (val) => "Hello " + val;
 // Arrow Function Without Parentheses:
 hello = val => "Hello " + val;
 
-// https://www.w3schools.com/REACT/react_es6_arrow.asp
 // What About "this"?
+
+// In regular functions the this keyword represented the object that called the
+// function, which could be the window, the document, a button or whatever.
+// With arrow functions, the this keyword always represents the object that
+// defined the arrow function.
+
+// Example using REGULAR function with "this" keyword
+
+class Header {
+  constructor() {
+    this.color = "Red";
+  }
+
+  //Regular function:
+  changeColor = function () {
+    document.getElementById("demo").innerHTML += this;
+  }
+}
+
+const myheader = new Header();
+
+//The window object calls the function:
+window.addEventListener("load", myheader.changeColor);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", myheader.changeColor);
+
+// By calling the method, we get this represents: [object Window] on load and
+// this represents: [object HTMLButtonElement] on click of the button.
+
+// Example using ARROW function with "this" keyword
+
+class Header {
+  constructor() {
+    this.color = "Red";
+  }
+
+  //Arrow function:
+  changeColor = () => {
+    document.getElementById("demo").innerHTML += this;
+  }
+}
+
+const myheader = new Header();
+
+
+//The window object calls the function:
+window.addEventListener("load", myheader.changeColor);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", myheader.changeColor);
+
+// With an arrow function, this represents the Header object no matter who
+// called the function (this represents:[object Object], Object being the
+// Header object).
+
+// Sometimes the behavior of regular functions is what you want, if not,
+// use arrow functions (looks cleaner, more styled and it's shorter).
