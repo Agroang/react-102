@@ -3,7 +3,7 @@
 // https://reactjs.org/tutorial/tutorial.html
 // https://www.w3schools.com/REACT/DEFAULT.ASP
 
-//////////////////// https://www.w3schools.com/REACT/DEFAULT.ASP ///////////////
+/////////////////// https://www.w3schools.com/REACT/react_jsx.asp //////////////
 
 // React JSX -------------------------------------------------------------------
 
