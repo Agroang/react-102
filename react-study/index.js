@@ -151,3 +151,24 @@ document.getElementById("btn").addEventListener("click", myheader.changeColor);
 
 // Sometimes the behavior of regular functions is what you want, if not,
 // use arrow functions (looks cleaner, more styled and it's shorter).
+
+
+// ES6 Variables (let, const) --------------------------------------------------
+
+// ES5 "var":
+// Before ES6 we only had "var" as keyword to define a variable.
+// If you use var outside of a function, it belongs to the global scope.
+// If you use var inside of a function, it belongs to that function.
+// If you use var inside of a block, i.e.a for loop, the variable is still
+// available outside of that block.
+// var has a function scope, not a block scope.
+
+// ES6 "let":
+// let is the block scoped version of var, and is limited to the block (or
+// expression) where it is defined.
+// If you use let inside of a block, i.e.a for loop, the variable is only
+// available inside of that loop.
+// let has a block scope.
+
+// https://www.w3schools.com/REACT/react_es6_variables.asp
+// next is const
