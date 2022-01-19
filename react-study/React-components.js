@@ -20,3 +20,37 @@
 // is now suggested to use Function components along with Hooks, which were
 // added in React 16.8.There is an optional section on Class components for your
 // reference.
+
+
+// When creating a React component, the component's name MUST start with an
+// upper case letter.
+
+// Class Component: (mostly before React 16.8)
+
+// A class component must include the extends React.Component statement. This
+// statement creates an inheritance to React.Component, and gives your component
+// access to React.Component's functions.
+
+// The component also requires a render() method, this method returns HTML.
+
+// Create a Class component called Car:
+
+class Car extends React.Component {
+  render() {
+    return <h2>Hi, I am a Car!</h2>;
+  }
+}
+
+// Function Component (modern way of making components):
+
+// A Function component also returns HTML, and behaves much the same way as a
+// Class component, but Function components can be written using much less code,
+// and are easier to understand.
+
+// Create a Function component called Car (same as example above)
+
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+
+// Rendering a Component:
