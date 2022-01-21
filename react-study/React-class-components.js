@@ -295,7 +295,7 @@ class Car extends React.Component {
 
 // The three phases are: Mounting, Updating, and Unmounting.
 
-// Mounting:
+// Mounting:  ------------------------------------------------------------------
 
 // Mounting means putting elements into the DOM.
 // React has four built -in methods that gets called, in this order, when
@@ -411,3 +411,53 @@ class Header extends React.Component {
 }
 
 ReactDOM.render(<Header />, document.getElementById('root'));
+
+// Updating: -------------------------------------------------------------------
+
+// The next phase in the lifecycle is when a component is updated.
+// A component is updated whenever there is a change in the component's state or
+// props.
+// React has five built -in methods that gets called, in this order, when a
+// component is updated:
+
+getDerivedStateFromProps()
+shouldComponentUpdate()
+render()
+getSnapshotBeforeUpdate()
+componentDidUpdate()
+
+// The render() method is required and will always be called, the others are
+// optional and will be called if you define them.
+
+// getDerivedStateFromProps:
+
+// If the component gets updated, the getDerivedStateFromProps() method is
+// called:
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" };
+  }
+  static getDerivedStateFromProps(props, state) {
+    return { favoritecolor: props.favcol };
+  }
+  changeColor = () => {
+    this.setState({ favoritecolor: "blue" });
+  }
+  render() {
+    return (
+      <div>
+        <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+        <button type="button" onClick={this.changeColor}>Change color</button>
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<Header favcol="yellow" />, document.getElementById('root'));
+
+// ** The resulting color is still "yellow", becase the
+// getDerivedStateFromProps() method is called, the favorite color is still
+// rendered as yellow (because the method updates the state with the color from the
+// favcol attribute). **
