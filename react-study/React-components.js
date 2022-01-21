@@ -75,3 +75,51 @@ function Car(props) {
 }
 
 ReactDOM.render(<Car color="red" />, document.getElementById('root'));
+
+// Components in Components:
+
+// We can refer components inside other components:
+
+// Use the Car component inside the Garage component:
+
+function Car() {
+  return <h2>I am a Car!</h2>;
+}
+
+function Garage() {
+  return (
+    <>
+      <h1>Who lives in my Garage?</h1>
+      <Car />
+    </>
+  );
+}
+
+ReactDOM.render(<Garage />, document.getElementById('root'));
+
+// Components in Files:
+
+// React is all about re - using code, and it is recommended to split your
+// components into separate files. To do that, create a new file with a.js file
+// extension and put the code inside it.
+// Note that the filename must start with an uppercase character.
+
+// This is the new file, we named it "Car.js":
+
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+
+export default Car;
+
+// To be able to use the Car component, you have to import the file in your
+// application.
+
+// Now we import the "Car.js" file in the application, and we can use the Car
+// component as if it was created here.
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Car from './Car.js';
+
+ReactDOM.render(<Car />, document.getElementById('root'));
