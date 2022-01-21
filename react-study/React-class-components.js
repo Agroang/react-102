@@ -368,3 +368,46 @@ class Header extends React.Component {
 ReactDOM.render(<Header favcol="yellow" />, document.getElementById('root'));
 
 // render:
+
+// The render() method is required, and is the method that actually outputs the
+// HTML to the DOM.
+
+// A simple component with a simple render() method:
+
+class Header extends React.Component {
+  render() {
+    return (
+      <h1>This is the content of the Header component</h1>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
+
+// componentDidMount:
+
+// The componentDidMount() method is called after the component is rendered.
+// This is where you run statements that requires that the component is already
+// placed in the DOM.
+
+// At first my favorite color is red, but give me a second, and it is yellow
+// instead: (changes in 1 second from red to yellow)
+
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { favoritecolor: "red" };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ favoritecolor: "yellow" })
+    }, 1000)
+  }
+  render() {
+    return (
+      <h1>My Favorite Color is {this.state.favoritecolor}</h1>
+    );
+  }
+}
+
+ReactDOM.render(<Header />, document.getElementById('root'));
