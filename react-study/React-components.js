@@ -54,3 +54,24 @@ function Car() {
 }
 
 // Rendering a Component:
+
+// You can render your component with a similar syntax to HTML:
+
+<Car />
+
+// Props:
+
+// Props stands for properties.
+// Props are like function arguments, and you send them into the component as
+// attributes. You pass them when rendering the component and the function
+// definition will be able to pick up those props with the same name that
+// you called them when passing them on the rendering.
+
+// Use an attribute to pass a color to the Car component, and use it in the
+// render() function:
+
+function Car(props) {
+  return <h2>I am a {props.color} Car!</h2>;
+}
+
+ReactDOM.render(<Car color="red" />, document.getElementById('root'));
