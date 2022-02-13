@@ -8,6 +8,9 @@ const SearchParams = () => {
   // }
   // and pass that to the onChange instead of the arrow function:
   // onChange={updateLocation}
+
+  // NEVER put state inside loops, or if statements, it really messes order up
+  // and you can get weird rendering, its a no-no
   return (
     <div className="search-params">
       <form>
