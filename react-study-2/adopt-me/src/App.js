@@ -2,7 +2,8 @@ import React from "react"; // With the latests versions of React we really
 // dont have to import React anymore, Babel is intelligent enough to do it for
 // you
 import ReactDOM from "react-dom";
-import Pet from "./Pet"
+// import Pet from "./Pet"
+import SearchParams from "./SearchParams";
 
 // const App = () => {
 //   // Once we use JSX we never write createElement again
@@ -33,7 +34,7 @@ const App = () => {
   return (
   <div>
     <h1>Adopt Me!</h1>
-    <Pet
+    {/* <Pet
       name="Luna"
       animal="Dog"
       breed="Havanese"
@@ -47,7 +48,8 @@ const App = () => {
       name="Doink"
       animal="Cat"
       breed="Mix"
-    />
+    /> */}
+    <SearchParams />;
   </div>
   )
 }
