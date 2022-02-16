@@ -1,6 +1,7 @@
 import Pet from "./Pet";
 
-const Results = ({ pets }) => {
+const Results = ({ pets }) => { // destructuring, grabing from props what you
+  // want, instead of having to do props.pets every time
   return (
     <div className="search">
       {!pets.length ? (
